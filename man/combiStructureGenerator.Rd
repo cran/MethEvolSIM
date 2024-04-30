@@ -48,7 +48,7 @@ Note that this object can be generated within a treeMultiRegionSimulator object.
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{infoStr}}{Dataframe with 'start' and 'end' indexes and 'globalState' for each singleStructureGenerator object.
+\item{\code{infoStr}}{A data frame containing columns 'n' for the number of sites, and 'globalState' for the favoured global methylation state.
 If initial equilibrium frequencies are given the dataframe must contain 3 additional columns: 'u_eqFreq', 'p_eqFreq' and 'm_eqFreq'}
 
 \item{\code{params}}{Default NULL. When given: data frame containing model parameters.}

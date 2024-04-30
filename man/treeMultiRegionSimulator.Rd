@@ -83,7 +83,7 @@ Note that one of either infoStr or rootData needs to be given. Not both, not nei
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{infoStr}}{Dataframe with 'start' and 'end' indexes and 'globalState' for each singleStructureGenerator object.
+\item{\code{infoStr}}{A data frame containing columns 'n' for the number of sites, and 'globalState' for the favoured global methylation state.
 If initial equilibrium frequencies are given the dataframe must contain 3 additional columns: 'u_eqFreq', 'p_eqFreq' and 'm_eqFreq'}
 
 \item{\code{rootData}}{combiStructureGenerator object. When given, the simulation uses its parameter values.}

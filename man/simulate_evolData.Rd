@@ -15,7 +15,7 @@ simulate_evolData(
 )
 }
 \arguments{
-\item{infoStr}{A data frame containing columns 'start', 'end', and 'globalState'.
+\item{infoStr}{A data frame containing columns 'n' for the number of sites, and 'globalState' for the favoured global methylation state.
 If customized initial equilibrium frequencies are given, it also contains columns 'u_eqFreq', 'p_eqFreq', and 'm_eqFreq'
 with the equilibrium frequency values for unmethylated, partially methylated, and methylated.}
 

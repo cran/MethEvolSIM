@@ -69,5 +69,3 @@ test_that("listFreqVector_validation", {
               info = "validationStates length different form provided listFreqVector length")
 })
 
-
-

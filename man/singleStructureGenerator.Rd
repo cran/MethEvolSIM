@@ -34,6 +34,10 @@ an R6 class representing a single genomic structure
 \item \href{#method-singleStructureGenerator-get_alpha_Ri}{\code{singleStructureGenerator$get_alpha_Ri()}}
 \item \href{#method-singleStructureGenerator-get_iota}{\code{singleStructureGenerator$get_iota()}}
 \item \href{#method-singleStructureGenerator-get_Ri_values}{\code{singleStructureGenerator$get_Ri_values()}}
+\item \href{#method-singleStructureGenerator-get_Q}{\code{singleStructureGenerator$get_Q()}}
+\item \href{#method-singleStructureGenerator-get_siteR}{\code{singleStructureGenerator$get_siteR()}}
+\item \href{#method-singleStructureGenerator-get_neighbSt}{\code{singleStructureGenerator$get_neighbSt()}}
+\item \href{#method-singleStructureGenerator-update_ratetree_otherStr}{\code{singleStructureGenerator$update_ratetree_otherStr()}}
 \item \href{#method-singleStructureGenerator-clone}{\code{singleStructureGenerator$clone()}}
 }
 }
@@ -462,6 +466,99 @@ Public Method.
 
 \subsection{Returns}{
 The 3 $Ri_values
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-get_Q"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_Q}{}}}
+\subsection{Method \code{get_Q()}}{
+Public Method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_Q(
+  siteR = NULL,
+  neighbSt = NULL,
+  oldSt = NULL,
+  newSt = NULL
+)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{siteR}}{default NULL. Numerical value encoding for the sites rate of independent SSE (1, 2 or 3)}
+
+\item{\code{neighbSt}}{default NULL. Numerical value encoding for the sites neighbouring state (as in mapNeighbSt_matrix)}
+
+\item{\code{oldSt}}{default NULL. Numerical value encoding for the sites old methylation state (1, 2 or 3)}
+
+\item{\code{newSt}}{default NULL. Numerical value encoding for the sites new methylation state (1, 2 or 3)}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+With NULL arguments, the list of rate matrices. With non NULL arguments, the corresponding rate of change.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-get_siteR"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_siteR}{}}}
+\subsection{Method \code{get_siteR()}}{
+Public Method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_siteR(index = NULL)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{index}}{default NULL. Numerical value for the index of the CpG position within the singleStr instance}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+with NULL arguments, siteR vector. non NULL arguments, the corresponding siteR
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-get_neighbSt"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_neighbSt}{}}}
+\subsection{Method \code{get_neighbSt()}}{
+Public Method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_neighbSt(index = NULL)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{index}}{default NULL. Numerical value for the index of the CpG position within the singleStr instance}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+with NULL arguments, neighbSt vector. non NULL arguments, the corresponding neighbSt
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-update_ratetree_otherStr"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-update_ratetree_otherStr}{}}}
+\subsection{Method \code{update_ratetree_otherStr()}}{
+Public Method. Update ratetree from another singleStructure instance
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$update_ratetree_otherStr(position, rate)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{position}}{Numerical value for the index of the CpG position within the singleStr instance}
+
+\item{\code{rate}}{Rate of change to asign to that position}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+NULL
 }
 }
 \if{html}{\out{<hr>}}

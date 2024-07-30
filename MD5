@@ -1,13 +1,13 @@
-f72ffc24f433b6cbdedf56766f50e05e *DESCRIPTION
+3f40f9260d64c036122daeb7eb5d6842 *DESCRIPTION
 4f86dab524cdfecb68bfe2f84ed45d68 *NAMESPACE
 0ab8456597f85425236d5344fad130a2 *R/QC.R
-97c7975164c23cca14b2dccd80737a13 *R/multiRegion_SIM.R
+e6b499beb20c55c0ad2a966dd4983772 *R/multiRegion_SIM.R
 5da79be415d4ce543a24525b2d8624ac *R/user_functions.R
 c4301e70dff91341daaffa3e3edfd357 *README.md
 e27e994f3ebdfd18b317375f3186006e *build/vignette.rds
 0762e200a3e4553db0eff4da995cc3bc *inst/doc/intro-vignette.R
-04027a79a744b2f39be36aef11691839 *inst/doc/intro-vignette.Rmd
-2906ea8deb91bbd520709e2e2e3b3e6e *inst/doc/intro-vignette.html
+0541ce5b20a8cad7f5b7813198437336 *inst/doc/intro-vignette.Rmd
+02fee1ce5dd67ceab3d0a47231232694 *inst/doc/intro-vignette.html
 91d7fac7189b224a5440f6e0a7764988 *man/combiStructureGenerator.Rd
 816e3788ebdf4601b2d11ae33a8689d3 *man/get_parameterValues.Rd
 c3844aa25aaa635e9f2305197bd42f95 *man/simulate_evolData.Rd
@@ -18,5 +18,5 @@ f5c801bb11673267c77453276bb75c36 *tests/testthat.R
 3a8327498476a78868a74cb5ce306368 *tests/testthat/test-QC.R
 317f9938af3e0ae0e43c3d147e30755a *tests/testthat/test-multiRegion_SIM.R
 b6b6896388a185c0bd9900c1d9fbffa6 *tests/testthat/test-user_functions.R
-04027a79a744b2f39be36aef11691839 *vignettes/intro-vignette.Rmd
+0541ce5b20a8cad7f5b7813198437336 *vignettes/intro-vignette.Rmd
 e23ffb8abbcf2d77ecd66080792f8d69 *vignettes/references.bib

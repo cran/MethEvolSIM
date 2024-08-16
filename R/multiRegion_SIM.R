@@ -649,6 +649,18 @@ singleStructureGenerator <-
                   if (!length(n)==1){
                     stop("n must be of length 1")
                   }
+                  if(!is.null(params)){
+                    private$alpha_pI <- params$alpha_pI
+                    private$beta_pI <- params$beta_pI
+                    private$alpha_mI <- params$alpha_mI
+                    private$beta_mI <- params$beta_mI
+                    private$alpha_pNI <- params$alpha_pNI
+                    private$beta_pNI <- params$beta_pNI
+                    private$alpha_mNI <- params$alpha_mNI
+                    private$beta_mNI <- params$beta_mNI
+                    private$alpha_Ri <- params$alpha_Ri
+                    private$iota <- params$iota
+                  }
                   private$globalState <- globalState
                   if(is.null(eqFreqs)){
                     private$eqFreqs <- private$sample_eqFreqs()
@@ -657,18 +669,6 @@ singleStructureGenerator <-
                       stop("if 'eqFreqs' is not NULL, provide a numeric vector of 3 frequencies ")
                     }
                     private$eqFreqs <- eqFreqs
-                  }
-                  if(!is.null(params)){
-                    private$alpha_pI <- params$alpha_pI
-                    private$beta_pI <- params$beta_pI
-                    private$alpha_mI <- params$alpha_mI
-                    private$beta_mI <- params$beta_mI
-                    private$alpha_pNI <- params$beta_pNI
-                    private$beta_pNI <- params$beta_pNI
-                    private$alpha_mNI <- params$alpha_mNI
-                    private$beta_mNI <- params$beta_mNI
-                    private$alpha_Ri <- params$alpha_Ri
-                    private$iota <- params$iota
                   }
                   private$seq <- sample(1L:3L, size = n, prob = private$eqFreqs, replace = TRUE)
                   if(testing){ # when testing neighbSt initiate instance with n=13

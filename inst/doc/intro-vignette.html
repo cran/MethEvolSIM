@@ -437,15 +437,18 @@ and 0.5 for partially methylated or hemimethylated.</p>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; [1] &quot;b&quot;</span></span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co"># In replicate 1, tip 2: sequence of methylation states of left non-island structure</span></span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>output<span class="sc">$</span>data[[<span class="dv">1</span>]][[<span class="dv">2</span>]]<span class="sc">$</span>seq[[<span class="dv">1</span>]]</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt;  [1] 1 1 1 1 1 1 1 1 1 1</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt;  [1] 1.0 1.0 1.0 0.5 1.0 1.0 1.0 0.5 0.5 0.5</span></span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co"># In replicate 1, tip 2: sequence of methylation states of island structure</span></span>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>output<span class="sc">$</span>data[[<span class="dv">1</span>]][[<span class="dv">2</span>]]<span class="sc">$</span>seq[[<span class="dv">2</span>]]</span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt;   [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt;  [38] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt;  [75] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co"># In replicate 1, tip 2: sequence of methylation states of right non-island structure</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>output<span class="sc">$</span>data[[<span class="dv">1</span>]][[<span class="dv">2</span>]]<span class="sc">$</span>seq[[<span class="dv">3</span>]]</span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt;  [1] 1 1 1 1 1 1 1 1 1 1</span></span></code></pre></div>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt;   [1] 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt;  [19] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt;  [37] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt;  [55] 1.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt;  [73] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt;  [91] 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.0</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co"># In replicate 1, tip 2: sequence of methylation states of right non-island structure</span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>output<span class="sc">$</span>data[[<span class="dv">1</span>]][[<span class="dv">2</span>]]<span class="sc">$</span>seq[[<span class="dv">3</span>]]</span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt;  [1] 1 1 1 1 1 1 1 1 1 1</span></span></code></pre></div>
 </div>
 <div id="model-parameters" class="section level1">
 <h1>Model parameters</h1>
@@ -789,13 +792,13 @@ used to access each of the contained structures:</p>
 the contained information.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># E.g. get the methylation equilibrium frequencies of the first singleStructureGenerator</span></span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>combiStr_object<span class="sc">$</span><span class="fu">get_singleStr</span>(<span class="dv">1</span>)<span class="sc">$</span><span class="fu">get_eqFreqs</span>()</span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="co">#&gt; [1] 0.005943347 0.002538927 0.991517726</span></span></code></pre></div>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="co">#&gt; [1] 2.220446e-16 7.080049e-05 9.999292e-01</span></span></code></pre></div>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># E.g. get the sequence of methylation states of the second singleStructureGenerator</span></span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="co"># Encoded as: 1 for unmethylated, 2 for partially-methylated, 3 for methylated</span></span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>combiStr_object<span class="sc">$</span><span class="fu">get_singleStr</span>(<span class="dv">2</span>)<span class="sc">$</span><span class="fu">get_seq</span>()</span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="co">#&gt;   [1] 1 1 1 1 1 1 2 1 1 1 2 1 1 1 1 1 1 1 1 2 2 1 2 1 1 2 2 2 1 1 1 2 1 2 1 1 2</span></span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="co">#&gt;  [38] 1 1 1 1 1 1 1 1 2 2 1 2 2 1 1 2 1 2 1 1 1 1 1 2 1 1 2 1 1 2 1 1 1 1 1 1 1</span></span>
-<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="co">#&gt;  [75] 1 2 1 1 1 1 1 1 1 1 1 1 1 1 2 2 1 1 1 1 1 2 1 2 2 1</span></span></code></pre></div>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="co">#&gt;   [1] 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 2 3 3 3 3 3 1 3 3 3 1 3 3 3 3 3 3 3 3 1 3</span></span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="co">#&gt;  [38] 3 3 3 3 3 3 3 3 1 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 3 1 3 3 3 3 3 3</span></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="co">#&gt;  [75] 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1</span></span></code></pre></div>
 </div>
 </div>
 <div id="simulation-of-data-evolution" class="section level2">
@@ -934,19 +937,19 @@ given to the function. E.g:</p></li>
 <span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="co"># each simulated island and non-island</span></span>
 <span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a><span class="co"># Encoded as 0 for unmethylated, 0.5 for partially methylated and 1 for methylated</span></span>
 <span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>root<span class="sc">$</span>seq[[<span class="dv">1</span>]] <span class="co"># First sequence (non-island)</span></span>
-<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="co">#&gt;   [1] 1.0 1.0 1.0 1.0 1.0 1.0 0.0 0.0 1.0 0.0 1.0 1.0 1.0 1.0 0.0 0.5 0.5 1.0</span></span>
-<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="co">#&gt;  [19] 0.0 1.0 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5 1.0</span></span>
-<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a><span class="co">#&gt;  [37] 0.5 1.0 1.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0</span></span>
-<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="co">#&gt;  [55] 1.0 1.0 1.0 0.0 0.5 1.0 1.0 1.0 1.0 0.5 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0</span></span>
-<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a><span class="co">#&gt;  [73] 1.0 1.0 1.0 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0</span></span>
-<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a><span class="co">#&gt;  [91] 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5</span></span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="co">#&gt;   [1] 0.0 1.0 1.0 1.0 1.0 0.0 1.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5 1.0 1.0</span></span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="co">#&gt;  [19] 1.0 1.0 1.0 0.5 0.5 1.0 1.0 0.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0</span></span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a><span class="co">#&gt;  [37] 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.0 1.0</span></span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="co">#&gt;  [55] 1.0 1.0 1.0 1.0 1.0 0.0 1.0 0.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0</span></span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a><span class="co">#&gt;  [73] 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5 1.0 1.0 1.0</span></span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a><span class="co">#&gt;  [91] 1.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5</span></span>
 <span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a>root<span class="sc">$</span>seq[[<span class="dv">2</span>]] <span class="co"># Second sequence (island)</span></span>
-<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a><span class="co">#&gt;   [1] 0.0 1.0 0.5 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</span></span>
-<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a><span class="co">#&gt;  [19] 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.5 1.0 0.0 1.0 0.0 1.0 0.0 0.0</span></span>
-<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a><span class="co">#&gt;  [37] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.5 0.5 0.0 0.0 0.0 0.0 1.0 0.5</span></span>
-<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a><span class="co">#&gt;  [55] 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</span></span>
-<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a><span class="co">#&gt;  [73] 1.0 0.0 0.0 0.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0</span></span>
-<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a><span class="co">#&gt;  [91] 0.0 0.0 0.0 0.0 0.5 0.0 0.0 0.0 0.0 0.0</span></span></code></pre></div>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a><span class="co">#&gt;   [1] 0.0 0.0 0.0 0.0 0.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.5 0.0</span></span>
+<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a><span class="co">#&gt;  [19] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</span></span>
+<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a><span class="co">#&gt;  [37] 0.0 0.5 0.0 0.0 0.0 0.5 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.5 0.0 1.0</span></span>
+<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a><span class="co">#&gt;  [55] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0</span></span>
+<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a><span class="co">#&gt;  [73] 0.0 0.0 0.0 0.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.5 0.0 0.0 0.5 0.0 0.0 0.0</span></span>
+<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a><span class="co">#&gt;  [91] 0.0 0.0 0.5 1.0 0.0 0.0 0.0 1.0 0.0 0.5</span></span></code></pre></div>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="co"># - A list with each element representing the methylation frequencies for the states: unmethylated, partially-methylated and methylated</span></span>
 <span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>root<span class="sc">$</span>eqFreqs[[<span class="dv">1</span>]][<span class="dv">1</span>] <span class="co"># First structure of root (non-island) equilibrium frequency for unmethylated state</span></span>
 <span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a><span class="co">#&gt; [1] 0.1</span></span>

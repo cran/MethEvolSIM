@@ -22,6 +22,7 @@ an R6 class representing a single genomic structure
 \item \href{#method-singleStructureGenerator-update_interStr_lastNeighbSt}{\code{singleStructureGenerator$update_interStr_lastNeighbSt()}}
 \item \href{#method-singleStructureGenerator-get_eqFreqs}{\code{singleStructureGenerator$get_eqFreqs()}}
 \item \href{#method-singleStructureGenerator-SSE_evol}{\code{singleStructureGenerator$SSE_evol()}}
+\item \href{#method-singleStructureGenerator-get_transMat}{\code{singleStructureGenerator$get_transMat()}}
 \item \href{#method-singleStructureGenerator-IWE_evol}{\code{singleStructureGenerator$IWE_evol()}}
 \item \href{#method-singleStructureGenerator-get_alpha_pI}{\code{singleStructureGenerator$get_alpha_pI()}}
 \item \href{#method-singleStructureGenerator-get_beta_pI}{\code{singleStructureGenerator$get_beta_pI()}}
@@ -286,6 +287,46 @@ dataframe with the position(s) affected, new state and old methylation state.
 }
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-get_transMat"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_transMat}{}}}
+\subsection{Method \code{get_transMat()}}{
+Public Method. Get a transition matrix
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_transMat(
+  old_eqFreqs,
+  new_eqFreqs,
+  info,
+  testing = FALSE
+)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{old_eqFreqs}}{numeric vector with 3 frequency values (for old u, p and m)}
+
+\item{\code{new_eqFreqs}}{numeric vector with 3 frequency values (for new u, p and m)}
+
+\item{\code{info}}{character string to indicate where the method is being called}
+
+\item{\code{testing}}{logical value for testing purposes. Default FALSE.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Details}{
+Given a tripple of old equilibrium frequencies and new equilibrium frequencies, generates the corresponding transition matrix.
+}
+
+\subsection{Returns}{
+transMat. The transition matrix. If testing = TRUE it returns a list.
+If there was a change in the equilibrium frequencies the list contains the following 7 elements, if not it contains the first 3 elements:
+\describe{
+\item{\code{transMat}}{transition matrix}
+\item{\code{case}}{The applied case.}
+}
+}
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-IWE_evol"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-IWE_evol}{}}}
 \subsection{Method \code{IWE_evol()}}{
@@ -307,7 +348,7 @@ along a branch of length t according to the SSE-IWE model.
 \subsection{Details}{
 The function checks if the methylation equilibrium frequencies (\code{eqFreqs}) and sequence observed
 frequencies (\code{obsFreqs}) change after the IWE event. If there is a change in either
-frequencies, the corresponding change flags(\code{eqFreqsChange}
+frequencies, the corresponding change flag \code{eqFreqsChange}
 in the \code{infoIWE} list will be set to \code{TRUE}.
 }
 

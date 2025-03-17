@@ -7,9 +7,11 @@
 simulate_evolData(
   infoStr = NULL,
   rootData = NULL,
-  tree,
+  tree = NULL,
   params = NULL,
   dt = 0.01,
+  CFTP = FALSE,
+  CFTP_step_limit = 327680000,
   n_rep = 1,
   only_tip = TRUE
 )
@@ -27,6 +29,11 @@ with the equilibrium frequency values for unmethylated, partially methylated, an
 Structure as in get_parameterValues() output. If not provided, default values will be used.}
 
 \item{dt}{Length of time step for Gillespie's Tau-Leap Approximation (default is 0.01).}
+
+\item{CFTP}{Default FALSE. TRUE for calling cftp algorithm to set root state according to model equilibrium (Note that current implementation neglects IWE process).}
+
+\item{CFTP_step_limit}{when CFTP = TRUE, maximum number of steps before applying an approximation method
+(default 327680000 corresponding to size of CFTP info of approx 6.1 GB).}
 
 \item{n_rep}{Number of replicates to simulate (default is 1).}
 

@@ -4,15 +4,25 @@
 \alias{simulate_initialData}
 \title{Simulate Initial Data}
 \usage{
-simulate_initialData(infoStr, params = NULL)
+simulate_initialData(
+  infoStr,
+  params = NULL,
+  CFTP = FALSE,
+  CFTP_step_limit = 327680000
+)
 }
 \arguments{
 \item{infoStr}{A data frame containing columns 'n' for the number of sites, and 'globalState' for the favoured global methylation state.
 If customized equilibrium frequencies are given, it also contains columns 'u_eqFreq', 'p_eqFreq' and 'm_eqFreq'
 with the equilibrium frequency values for unmethylated, partially methylated and methylated.}
 
-\item{params}{Optional data frame with specific parameter values.
+\item{params}{Optional data frame with specific parameter values.}
+
+\item{CFTP}{Default FALSE. TRUE for calling cftp algorithm to set root state according to model equilibrium (Note that current implementation neglects IWE process).
 Structure as in get_parameterValues() output. If not provided, default values will be used.}
+
+\item{CFTP_step_limit}{when CFTP = TRUE, maximum number of steps before applying an approximation method
+(default 327680000 corresponding to size of CFTP info of approx 6.1 GB).}
 }
 \value{
 A list containing the simulated data ($data) and parameters ($params).

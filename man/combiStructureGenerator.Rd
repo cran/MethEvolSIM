@@ -8,12 +8,20 @@ an R6 class representing several genomic structures.
 Each genomic structure contained is an object of class singleStructureGenerator.
 Note that default clone(deep=TRUE) fails to clone singleStructureGenerator objects contained, use method $copy() instead.
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{testing_output}}{Public attribute: Testing output for initialize}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-combiStructureGenerator-new}{\code{combiStructureGenerator$new()}}
 \item \href{#method-combiStructureGenerator-get_singleStr}{\code{combiStructureGenerator$get_singleStr()}}
 \item \href{#method-combiStructureGenerator-get_singleStr_number}{\code{combiStructureGenerator$get_singleStr_number()}}
+\item \href{#method-combiStructureGenerator-get_singleStr_siteNumber}{\code{combiStructureGenerator$get_singleStr_siteNumber()}}
 \item \href{#method-combiStructureGenerator-get_island_number}{\code{combiStructureGenerator$get_island_number()}}
 \item \href{#method-combiStructureGenerator-get_island_index}{\code{combiStructureGenerator$get_island_index()}}
 \item \href{#method-combiStructureGenerator-set_IWE_events}{\code{combiStructureGenerator$set_IWE_events()}}
@@ -28,9 +36,18 @@ Note that default clone(deep=TRUE) fails to clone singleStructureGenerator objec
 \item \href{#method-combiStructureGenerator-set_offspring_index}{\code{combiStructureGenerator$set_offspring_index()}}
 \item \href{#method-combiStructureGenerator-add_offspring_index}{\code{combiStructureGenerator$add_offspring_index()}}
 \item \href{#method-combiStructureGenerator-get_mu}{\code{combiStructureGenerator$get_mu()}}
+\item \href{#method-combiStructureGenerator-get_id}{\code{combiStructureGenerator$get_id()}}
+\item \href{#method-combiStructureGenerator-set_id}{\code{combiStructureGenerator$set_id()}}
+\item \href{#method-combiStructureGenerator-get_sharedCounter}{\code{combiStructureGenerator$get_sharedCounter()}}
+\item \href{#method-combiStructureGenerator-reset_sharedCounter}{\code{combiStructureGenerator$reset_sharedCounter()}}
 \item \href{#method-combiStructureGenerator-set_singleStr}{\code{combiStructureGenerator$set_singleStr()}}
 \item \href{#method-combiStructureGenerator-copy}{\code{combiStructureGenerator$copy()}}
 \item \href{#method-combiStructureGenerator-branch_evol}{\code{combiStructureGenerator$branch_evol()}}
+\item \href{#method-combiStructureGenerator-get_highest_rate}{\code{combiStructureGenerator$get_highest_rate()}}
+\item \href{#method-combiStructureGenerator-set_CFTP_info}{\code{combiStructureGenerator$set_CFTP_info()}}
+\item \href{#method-combiStructureGenerator-get_CFTP_info}{\code{combiStructureGenerator$get_CFTP_info()}}
+\item \href{#method-combiStructureGenerator-cftp_apply_events}{\code{combiStructureGenerator$cftp_apply_events()}}
+\item \href{#method-combiStructureGenerator-cftp}{\code{combiStructureGenerator$cftp()}}
 \item \href{#method-combiStructureGenerator-clone}{\code{combiStructureGenerator$clone()}}
 }
 }
@@ -53,7 +70,7 @@ If initial equilibrium frequencies are given the dataframe must contain 3 additi
 
 \item{\code{params}}{Default NULL. When given: data frame containing model parameters.}
 
-\item{\code{testing}}{Default FALSE. TRUE for testing output.}
+\item{\code{testing}}{Default FALSE. TRUE for writing in public field of new instance $testing_output}
 }
 \if{html}{\out{</div>}}
 }
@@ -92,6 +109,19 @@ Public method: Get number of singleStructureGenerator objects in $singleStr
 
 \subsection{Returns}{
 number of singleStructureGenerator object contained in $singleStr
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-get_singleStr_siteNumber"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-get_singleStr_siteNumber}{}}}
+\subsection{Method \code{get_singleStr_siteNumber()}}{
+Public method: Get number of sites in all singleStructureGenerator objects
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$get_singleStr_siteNumber()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+number of sites in all singleStructureGenerator objects
 }
 }
 \if{html}{\out{<hr>}}
@@ -343,6 +373,65 @@ Model parameter for the rate of the IWE evolutionary process (per island and bra
 }
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-get_id"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-get_id}{}}}
+\subsection{Method \code{get_id()}}{
+Public method. Get the unique ID of the instance
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$get_id()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+A numeric value representing the unique ID of the instance.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-set_id"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-set_id}{}}}
+\subsection{Method \code{set_id()}}{
+Public method. Set the unique ID of the instance
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$set_id(id)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{id}}{integer value to identificate the combiStructure instance}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+A numeric value representing the unique ID of the instance.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-get_sharedCounter"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-get_sharedCounter}{}}}
+\subsection{Method \code{get_sharedCounter()}}{
+Public method. Get the counter value from the shared environment between instances of combiStructureGenerator class
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$get_sharedCounter()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+Numeric counter value.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-reset_sharedCounter"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-reset_sharedCounter}{}}}
+\subsection{Method \code{reset_sharedCounter()}}{
+Public method. Reset the counter value of the shared environment between instances of combiStructureGenerator class
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$reset_sharedCounter()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+NULL
+}
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-combiStructureGenerator-set_singleStr"></a>}}
 \if{latex}{\out{\hypertarget{method-combiStructureGenerator-set_singleStr}{}}}
 \subsection{Method \code{set_singleStr()}}{
@@ -403,6 +492,111 @@ It handles both cases where IWE events are sampled or not sampled within the bra
 
 \subsection{Returns}{
 Default NULL. If testing = TRUE it returns information for testing purposes.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-get_highest_rate"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-get_highest_rate}{}}}
+\subsection{Method \code{get_highest_rate()}}{
+Public Method. Gets the highest rate among all singleStructureGenerator objects for CFTP.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$get_highest_rate()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+Highest rate value.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-set_CFTP_info"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-set_CFTP_info}{}}}
+\subsection{Method \code{set_CFTP_info()}}{
+Public Method. Sets a cftpStepGenerator instance asthe CFTP info.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$set_CFTP_info(CFTP_instance)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{CFTP_instance}}{CFTP info.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+NULL
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-get_CFTP_info"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-get_CFTP_info}{}}}
+\subsection{Method \code{get_CFTP_info()}}{
+Public Method. Gets the CFTP info.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$get_CFTP_info()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+CFTP info.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-cftp_apply_events"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-cftp_apply_events}{}}}
+\subsection{Method \code{cftp_apply_events()}}{
+Public Method. Applies the CFTP events.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$cftp_apply_events(testing = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{testing}}{default FALSE. TRUE for testing output}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+NULL when testing FALSE. Testing output when testing TRUE.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-combiStructureGenerator-cftp"></a>}}
+\if{latex}{\out{\hypertarget{method-combiStructureGenerator-cftp}{}}}
+\subsection{Method \code{cftp()}}{
+Public Method. Applies the CFTP algorithm to evolve a structure and checks for convergence by comparing methylation states.
+
+This method generates CFTP steps until the methylation sequences of the current structure and a cloned structure become identical across all singleStr instances or a step limit is reached. If the step limit is exceeded, an approximation method is applied to finalize the sequence.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{combiStructureGenerator$cftp(
+  steps = 10000,
+  step_limit = 327680000,
+  testing = FALSE
+)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{steps}}{minimum number of steps to apply (default 10000).}
+
+\item{\code{step_limit}}{maximum number of steps before applying an approximation method
+(default 327680000 corresponding to size of CFTP info of approx 6.1 GB).
+If this limit is reached, the algorithm stops and an approximation is applied.}
+
+\item{\code{testing}}{logical. If TRUE, returns additional testing output including the current structure, the cloned structure, the counter value, total steps, and the chosen site for the CFTP events. Default is FALSE.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+NULL when testing is FALSE. If testing is TRUE, returns a list with:
+\itemize{
+\item \code{self}: the current object after applying the CFTP algorithm.
+\item \code{combi_m}: a deep cloned object with applied CFTP events.
+\item \code{counter}: the number of iterations performed.
+\item \code{total_steps}: the number of steps applied by the CFTP algorithm.
+\item \code{CFTP_chosen_site}: the site selected during the CFTP event application.
+}
 }
 }
 \if{html}{\out{<hr>}}

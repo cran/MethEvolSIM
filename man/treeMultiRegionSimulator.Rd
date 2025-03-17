@@ -13,6 +13,8 @@ Each genomic structure in it is contained in an object of class singleStructureG
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
+\item{\code{testing_output}}{Public attribute: Testing output for initialize}
+
 \item{\code{Branch}}{Public attribute: List containing objects of class combiStructureGenerator}
 
 \item{\code{branchLength}}{Public attribute: Vector with the corresponding branch lengths of each $Branch element}
@@ -73,9 +75,11 @@ Note that one of either infoStr or rootData needs to be given. Not both, not nei
 \if{html}{\out{<div class="r">}}\preformatted{treeMultiRegionSimulator$new(
   infoStr = NULL,
   rootData = NULL,
-  tree,
+  tree = NULL,
   params = NULL,
   dt = 0.01,
+  CFTP = FALSE,
+  CFTP_step_limit = 327680000,
   testing = FALSE
 )}\if{html}{\out{</div>}}
 }
@@ -90,9 +94,14 @@ If initial equilibrium frequencies are given the dataframe must contain 3 additi
 
 \item{\code{tree}}{tree}
 
-\item{\code{params}}{Default NULL. When given: data frame containing model parameters. Note that rootData is given, its parameter values are used.}
+\item{\code{params}}{Default NULL. When given: data frame containing model parameters. Note that if rootData is not null, its parameter values are used.}
 
 \item{\code{dt}}{length of the dt time steps for the SSE evolutionary process}
+
+\item{\code{CFTP}}{Default FALSE. TRUE for calling cftp algorithm to set root state according to model equilibrium (Note that current implementation neglects IWE process).}
+
+\item{\code{CFTP_step_limit}}{when CFTP = TRUE, maximum number of steps before applying an approximation method
+(default 327680000 corresponding to size of CFTP info of approx 6.1 GB).}
 
 \item{\code{testing}}{Default FALSE. TRUE for testing output.}
 }

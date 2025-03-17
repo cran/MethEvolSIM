@@ -89,8 +89,8 @@ combiStr_object <- initialD$data
 get_parameterValues(rootData = combiStr_object)
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  # E.g. access fist structure (non-island)
-#  combiStr_object$get_singleStr(1)
+# # E.g. access fist structure (non-island)
+# combiStr_object$get_singleStr(1)
 
 ## -----------------------------------------------------------------------------
 # E.g. get the methylation equilibrium frequencies of the first singleStructureGenerator
@@ -115,12 +115,12 @@ custom_params$mu <- 0.005
 evolD <- simulate_evolData(infoStr = custom_infoStr, tree = tree, params = custom_params, n_rep = 3, only_tip = TRUE)
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  # Returns customized parameters, tree used, time step length for SSE process used (dt)
-#  # and simulated data
-#  evolD$data
-#  evolD$dt
-#  evolD$tree
-#  evolD$params
+# # Returns customized parameters, tree used, time step length for SSE process used (dt)
+# # and simulated data
+# evolD$data
+# evolD$dt
+# evolD$tree
+# evolD$params
 
 ## -----------------------------------------------------------------------------
 # The simulated data is returned as a list. Each element of the list corresponds to a

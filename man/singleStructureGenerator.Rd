@@ -6,12 +6,20 @@
 \description{
 an R6 class representing a single genomic structure
 }
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{testing_output}}{Public attribute: Testing output for initialize}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-singleStructureGenerator-init_neighbSt}{\code{singleStructureGenerator$init_neighbSt()}}
 \item \href{#method-singleStructureGenerator-initialize_ratetree}{\code{singleStructureGenerator$initialize_ratetree()}}
 \item \href{#method-singleStructureGenerator-new}{\code{singleStructureGenerator$new()}}
+\item \href{#method-singleStructureGenerator-set_myCombiStructure}{\code{singleStructureGenerator$set_myCombiStructure()}}
 \item \href{#method-singleStructureGenerator-get_seq}{\code{singleStructureGenerator$get_seq()}}
 \item \href{#method-singleStructureGenerator-get_seqFirstPos}{\code{singleStructureGenerator$get_seqFirstPos()}}
 \item \href{#method-singleStructureGenerator-get_seq2ndPos}{\code{singleStructureGenerator$get_seq2ndPos()}}
@@ -39,6 +47,12 @@ an R6 class representing a single genomic structure
 \item \href{#method-singleStructureGenerator-get_siteR}{\code{singleStructureGenerator$get_siteR()}}
 \item \href{#method-singleStructureGenerator-get_neighbSt}{\code{singleStructureGenerator$get_neighbSt()}}
 \item \href{#method-singleStructureGenerator-update_ratetree_otherStr}{\code{singleStructureGenerator$update_ratetree_otherStr()}}
+\item \href{#method-singleStructureGenerator-get_Qi}{\code{singleStructureGenerator$get_Qi()}}
+\item \href{#method-singleStructureGenerator-get_seqSt_leftneighb}{\code{singleStructureGenerator$get_seqSt_leftneighb()}}
+\item \href{#method-singleStructureGenerator-get_seqSt_rightneighb}{\code{singleStructureGenerator$get_seqSt_rightneighb()}}
+\item \href{#method-singleStructureGenerator-cftp_all_equal}{\code{singleStructureGenerator$cftp_all_equal()}}
+\item \href{#method-singleStructureGenerator-set_seqSt_update_neighbSt}{\code{singleStructureGenerator$set_seqSt_update_neighbSt()}}
+\item \href{#method-singleStructureGenerator-reset_seq}{\code{singleStructureGenerator$reset_seq()}}
 \item \href{#method-singleStructureGenerator-clone}{\code{singleStructureGenerator$clone()}}
 }
 }
@@ -49,6 +63,12 @@ an R6 class representing a single genomic structure
 Public method: Initialization of $neighbSt
 
 This fuction initiates each CpG position $neighbSt as encoded in $mapNeighbSt_matrix
+
+It uses $update_neighbSt which updates for each sequence index, the neighbSt of left and right neighbors
+This means that it updates position 2, then 1 and 3, then 2 and 4..
+Therefore, if the combiStructure instance has several singleStr instances within and the first has length 1,
+the $neighbSt of that position of the first singleStr instance is initialized when the method is called from the second singleStr instance
+
 Positions at the edge of the entire simulated sequence use
 their only neighbor as both neighbors.
 \subsection{Usage}{
@@ -108,12 +128,32 @@ Note that this object is typically generated withing a combiStructureGenerator o
 
 \item{\code{params}}{Default NULL. When given: data frame containing model parameters}
 
-\item{\code{testing}}{Default FALSE. TRUE for testing output}
+\item{\code{testing}}{Default FALSE. TRUE for writing in public field of new instance $testing_output}
 }
 \if{html}{\out{</div>}}
 }
 \subsection{Returns}{
 A new \code{singleStructureGenerator} object.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-set_myCombiStructure"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-set_myCombiStructure}{}}}
+\subsection{Method \code{set_myCombiStructure()}}{
+Public method: Set my_combiStructure. Assigns given combi instance to private field my_combiStructure
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$set_myCombiStructure(combi)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{combi}}{instance of combiStructureGenerator}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+NULL
 }
 }
 \if{html}{\out{<hr>}}
@@ -206,17 +246,17 @@ This function is used when the last $seq position of a singleStructureGenerator 
 changes methylation state to update the neighbSt position
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$update_interStr_firstNeighbSt(
-  leftNeighbSt,
-  rightNeighbSt
+  leftNeighb_seqSt,
+  rightNeighb_seqSt
 )}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{leftNeighbSt}}{$seq state of left neighbor (left neighbor is in previous singleStructureGenerator object)}
+\item{\code{leftNeighb_seqSt}}{$seq state of left neighbor (left neighbor is in previous singleStructureGenerator object)}
 
-\item{\code{rightNeighbSt}}{$seq state of right neighbor}
+\item{\code{rightNeighb_seqSt}}{$seq state of right neighbor}
 }
 \if{html}{\out{</div>}}
 }
@@ -231,17 +271,17 @@ NULL
 Public method: Update neighbSt of previous singleStructureGenerator object within combiStructureGenerator object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$update_interStr_lastNeighbSt(
-  leftNeighbSt,
-  rightNeighbSt
+  leftNeighb_seqSt,
+  rightNeighb_seqSt
 )}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{leftNeighbSt}}{$seq state of right neighbor (left neighbor is in next singleStructureGenerator object)}
+\item{\code{leftNeighb_seqSt}}{$seq state of right neighbor (left neighbor is in next singleStructureGenerator object)}
 
-\item{\code{rightNeighbSt}}{$seq state of right neighbor}
+\item{\code{rightNeighb_seqSt}}{$seq state of right neighbor}
 }
 \if{html}{\out{</div>}}
 }
@@ -282,7 +322,7 @@ along a time step of length dt
 \if{html}{\out{</div>}}
 }
 \subsection{Returns}{
-default NULL. If testing TRUE it returns a list with the number of events sampled and a
+default NULL. If testing TRUE it returns a list with the debugNov3.outnumber of events sampled and a
 dataframe with the position(s) affected, new state and old methylation state.
 }
 }
@@ -600,6 +640,134 @@ Public Method. Update ratetree from another singleStructure instance
 }
 \subsection{Returns}{
 NULL
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-get_Qi"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_Qi}{}}}
+\subsection{Method \code{get_Qi()}}{
+Public Method. Get list of matrices for SSE process
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_Qi(siteR = NULL, oldSt = NULL, newSt = NULL)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{siteR}}{default NULL. Numerical value encoding for the sites rate of independent SSE (1, 2 or 3)}
+
+\item{\code{oldSt}}{default NULL. Numerical value encoding for the sites old methylation state (1, 2 or 3)}
+
+\item{\code{newSt}}{default NULL. Numerical value encoding for the sites new methylation state (1, 2 or 3)}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+With NULL arguments, the list of SSEi rate matrices. With non NULL arguments, the corresponding rate of change.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-get_seqSt_leftneighb"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seqSt_leftneighb}{}}}
+\subsection{Method \code{get_seqSt_leftneighb()}}{
+Public Method. Decode methylation state of left neighbor form owns neighbSt
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seqSt_leftneighb(index)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{index}}{Integer index value for the CpG position within the singleStr instance}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+decoded methylation state ($seq) of left neighbor (1, 2 or 3 for unmethylated, partially methylated or methylated)
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-get_seqSt_rightneighb"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seqSt_rightneighb}{}}}
+\subsection{Method \code{get_seqSt_rightneighb()}}{
+Public Method. Decode methylation state of left neighbor form owns neighbSt
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seqSt_rightneighb(index)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{index}}{Integer index value for the CpG position within the singleStr instance}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+decoded methylation state ($seq) of right neighbor (1, 2 or 3 for unmethylated, partially methylated or methylated)
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-cftp_all_equal"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-cftp_all_equal}{}}}
+\subsection{Method \code{cftp_all_equal()}}{
+Public Method. Make a singleStructure with the same segment lengths and parameters
+as the focal one but where all states are m or u
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$cftp_all_equal(state, testing = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{state}}{Character value "U" or "M"}
+
+\item{\code{testing}}{default FALSE. TRUE for testing output}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+right neighbSt
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-set_seqSt_update_neighbSt"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-set_seqSt_update_neighbSt}{}}}
+\subsection{Method \code{set_seqSt_update_neighbSt()}}{
+Public Method. Set the methylation state of a sequence position and update the neighbor's neighbSt. It does NOT update RATETREE
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$set_seqSt_update_neighbSt(
+  index,
+  newSt,
+  testing = FALSE
+)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{index}}{Numerical value for the index of the CpG position within the singleStr instance}
+
+\item{\code{newSt}}{Numerical value encoding for the sites new methylation state (1, 2 or 3)}
+
+\item{\code{testing}}{default FALSE. TRUE for testing output}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+NULL when testing FALSE. Testing output when testing TRUE.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-reset_seq"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-reset_seq}{}}}
+\subsection{Method \code{reset_seq()}}{
+Public Method. Resets the sequence states by resampling according to the instance's equilibrium frequencies.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$reset_seq()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+NULL. The sequence is updated in place.
 }
 }
 \if{html}{\out{<hr>}}

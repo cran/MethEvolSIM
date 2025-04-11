@@ -1,7 +1,7 @@
 Package: MethEvolSIM
 Title: Simulate DNA Methylation Dynamics on Different Genomic
         Structures along Genealogies
-Version: 0.2
+Version: 0.2.1
 Authors@R: c(
     person('Sara', 'Castillo Vicente', , 'castillo@bio.lmu.de', role=c('aut', 'cre')),
     person('Dirk', 'Metzler', , 'metzler@bio.lmu.de', role=c('aut', 'ths'))
@@ -33,6 +33,6 @@ Imports: R6, ape
 Depends: R (>= 4.0)
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2025-03-16 13:37:47 UTC; sara
+Packaged: 2025-04-11 11:08:50 UTC; castillo
 Repository: CRAN
-Date/Publication: 2025-03-17 07:00:03 UTC
+Date/Publication: 2025-04-11 22:00:19 UTC

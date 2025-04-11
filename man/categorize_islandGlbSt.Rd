@@ -23,8 +23,8 @@ based on specified thresholds.
 \details{
 The function assigns each island a state:
 \describe{
-\item{"u"}{if mean methylation lower or equal to \code{u_threshold}}
-\item{"m"}{if mean methylation greater or equal to \code{m_threshold}}
+\item{"u"}{if mean methylation lower or equal than \code{u_threshold}}
+\item{"m"}{if mean methylation greater or equal than \code{m_threshold}}
 \item{"p"}{if mean methylation is in between}
 }
 }

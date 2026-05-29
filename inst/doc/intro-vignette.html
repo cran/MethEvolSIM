@@ -410,15 +410,18 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="co">#&gt; [1] &quot;b&quot;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="co"># In replicate 1, tip 2: sequence of methylation states of left non-island structure</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>output<span class="op">$</span>data[[<span class="dv">1</span>]][[<span class="dv">2</span>]]<span class="op">$</span>seq[[<span class="dv">1</span>]]</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="co">#&gt;  [1] 1 1 1 1 1 1 1 1 1 0</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="co">#&gt;  [1] 1 1 1 1 1 1 1 1 1 1</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="co"># In replicate 1, tip 2: sequence of methylation states of island structure</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>output<span class="op">$</span>data[[<span class="dv">1</span>]][[<span class="dv">2</span>]]<span class="op">$</span>seq[[<span class="dv">2</span>]]</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a><span class="co">#&gt;   [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="co">#&gt;  [38] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="co">#&gt;  [75] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="co"># In replicate 1, tip 2: sequence of methylation states of right non-island structure</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>output<span class="op">$</span>data[[<span class="dv">1</span>]][[<span class="dv">2</span>]]<span class="op">$</span>seq[[<span class="dv">3</span>]]</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a><span class="co">#&gt;  [1] 0 0 0 0 0 0 0 0 1 1</span></span></code></pre></div>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a><span class="co">#&gt;   [1] 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.5 0.5 0.0 0.0 0.0</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="co">#&gt;  [19] 0.0 0.0 0.0 0.0 0.0 0.5 0.5 0.0 0.0 0.0 0.0 0.5 1.0 1.0 0.0 0.0 0.0 0.0</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="co">#&gt;  [37] 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 0.5 0.5 0.0 0.0</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="co">#&gt;  [55] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.5 0.0 0.5 0.5 0.5 0.5 0.5 0.0 0.0 0.0</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a><span class="co">#&gt;  [73] 0.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a><span class="co">#&gt;  [91] 0.0 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 0.0</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a><span class="co"># In replicate 1, tip 2: sequence of methylation states of right non-island structure</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>output<span class="op">$</span>data[[<span class="dv">1</span>]][[<span class="dv">2</span>]]<span class="op">$</span>seq[[<span class="dv">3</span>]]</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a><span class="co">#&gt;  [1] 0 0 0 0 0 0 0 0 0 0</span></span></code></pre></div>
 </div>
 <div id="model-parameters" class="section level1">
 <h1>Model parameters</h1>
@@ -571,26 +574,27 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb9-46"><a href="#cb9-46" aria-hidden="true"></a><span class="co">#&gt;     set_name: function (a) </span></span>
 <span id="cb9-47"><a href="#cb9-47" aria-hidden="true"></a><span class="co">#&gt;     set_offspring_index: function (i) </span></span>
 <span id="cb9-48"><a href="#cb9-48" aria-hidden="true"></a><span class="co">#&gt;     set_own_index: function (i) </span></span>
-<span id="cb9-49"><a href="#cb9-49" aria-hidden="true"></a><span class="co">#&gt;     set_parent_index: function (i) </span></span>
-<span id="cb9-50"><a href="#cb9-50" aria-hidden="true"></a><span class="co">#&gt;     set_singleStr: function (singStrList) </span></span>
-<span id="cb9-51"><a href="#cb9-51" aria-hidden="true"></a><span class="co">#&gt;     testing_output: NULL</span></span>
-<span id="cb9-52"><a href="#cb9-52" aria-hidden="true"></a><span class="co">#&gt;   Private:</span></span>
-<span id="cb9-53"><a href="#cb9-53" aria-hidden="true"></a><span class="co">#&gt;     CFTP_info: NULL</span></span>
-<span id="cb9-54"><a href="#cb9-54" aria-hidden="true"></a><span class="co">#&gt;     IWE_events: NULL</span></span>
-<span id="cb9-55"><a href="#cb9-55" aria-hidden="true"></a><span class="co">#&gt;     IWE_rate: 0.005</span></span>
-<span id="cb9-56"><a href="#cb9-56" aria-hidden="true"></a><span class="co">#&gt;     SSE_evol: function (dt, testing = FALSE) </span></span>
-<span id="cb9-57"><a href="#cb9-57" aria-hidden="true"></a><span class="co">#&gt;     get_next_id: function () </span></span>
-<span id="cb9-58"><a href="#cb9-58" aria-hidden="true"></a><span class="co">#&gt;     id: 29</span></span>
-<span id="cb9-59"><a href="#cb9-59" aria-hidden="true"></a><span class="co">#&gt;     interval_evol: function (interval_length, dt, testing = FALSE) </span></span>
-<span id="cb9-60"><a href="#cb9-60" aria-hidden="true"></a><span class="co">#&gt;     mu: 0.005</span></span>
-<span id="cb9-61"><a href="#cb9-61" aria-hidden="true"></a><span class="co">#&gt;     name: NULL</span></span>
-<span id="cb9-62"><a href="#cb9-62" aria-hidden="true"></a><span class="co">#&gt;     offspring_index: NULL</span></span>
-<span id="cb9-63"><a href="#cb9-63" aria-hidden="true"></a><span class="co">#&gt;     own_index: NULL</span></span>
-<span id="cb9-64"><a href="#cb9-64" aria-hidden="true"></a><span class="co">#&gt;     parent_index: NULL</span></span>
-<span id="cb9-65"><a href="#cb9-65" aria-hidden="true"></a><span class="co">#&gt;     set_IWE_rate: function () </span></span>
-<span id="cb9-66"><a href="#cb9-66" aria-hidden="true"></a><span class="co">#&gt;     shared_env: environment</span></span>
-<span id="cb9-67"><a href="#cb9-67" aria-hidden="true"></a><span class="co">#&gt;     singleStr: list</span></span>
-<span id="cb9-68"><a href="#cb9-68" aria-hidden="true"></a><span class="co">#&gt;     singleStr_globalState: M U M</span></span></code></pre></div>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true"></a><span class="co">#&gt;     set_params: function (params) </span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true"></a><span class="co">#&gt;     set_parent_index: function (i) </span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true"></a><span class="co">#&gt;     set_singleStr: function (singStrList) </span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true"></a><span class="co">#&gt;     testing_output: NULL</span></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true"></a><span class="co">#&gt;   Private:</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true"></a><span class="co">#&gt;     CFTP_info: NULL</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true"></a><span class="co">#&gt;     IWE_events: NULL</span></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true"></a><span class="co">#&gt;     IWE_rate: 0.005</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true"></a><span class="co">#&gt;     SSE_evol: function (dt, testing = FALSE) </span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true"></a><span class="co">#&gt;     get_next_id: function () </span></span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true"></a><span class="co">#&gt;     id: 27</span></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true"></a><span class="co">#&gt;     interval_evol: function (interval_length, dt, testing = FALSE) </span></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true"></a><span class="co">#&gt;     mu: 0.005</span></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true"></a><span class="co">#&gt;     name: NULL</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true"></a><span class="co">#&gt;     offspring_index: NULL</span></span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true"></a><span class="co">#&gt;     own_index: NULL</span></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true"></a><span class="co">#&gt;     parent_index: NULL</span></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true"></a><span class="co">#&gt;     set_IWE_rate: function () </span></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true"></a><span class="co">#&gt;     shared_env: environment</span></span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true"></a><span class="co">#&gt;     singleStr: list</span></span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true"></a><span class="co">#&gt;     singleStr_globalState: M U M</span></span></code></pre></div>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="co"># Example with sampled initial methylation frequencies and default parameter values</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>custom_infoStr &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">n =</span> <span class="kw">c</span>(<span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">100</span>),</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>                             <span class="dt">globalState =</span> <span class="kw">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;U&quot;</span>, <span class="st">&quot;M&quot;</span>))</span>
@@ -634,26 +638,27 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb10-41"><a href="#cb10-41" aria-hidden="true"></a><span class="co">#&gt;     set_name: function (a) </span></span>
 <span id="cb10-42"><a href="#cb10-42" aria-hidden="true"></a><span class="co">#&gt;     set_offspring_index: function (i) </span></span>
 <span id="cb10-43"><a href="#cb10-43" aria-hidden="true"></a><span class="co">#&gt;     set_own_index: function (i) </span></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true"></a><span class="co">#&gt;     set_parent_index: function (i) </span></span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true"></a><span class="co">#&gt;     set_singleStr: function (singStrList) </span></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true"></a><span class="co">#&gt;     testing_output: NULL</span></span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true"></a><span class="co">#&gt;   Private:</span></span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true"></a><span class="co">#&gt;     CFTP_info: NULL</span></span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true"></a><span class="co">#&gt;     IWE_events: NULL</span></span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true"></a><span class="co">#&gt;     IWE_rate: 0.1</span></span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true"></a><span class="co">#&gt;     SSE_evol: function (dt, testing = FALSE) </span></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true"></a><span class="co">#&gt;     get_next_id: function () </span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true"></a><span class="co">#&gt;     id: 30</span></span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true"></a><span class="co">#&gt;     interval_evol: function (interval_length, dt, testing = FALSE) </span></span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true"></a><span class="co">#&gt;     mu: 0.1</span></span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true"></a><span class="co">#&gt;     name: NULL</span></span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true"></a><span class="co">#&gt;     offspring_index: NULL</span></span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true"></a><span class="co">#&gt;     own_index: NULL</span></span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true"></a><span class="co">#&gt;     parent_index: NULL</span></span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true"></a><span class="co">#&gt;     set_IWE_rate: function () </span></span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true"></a><span class="co">#&gt;     shared_env: environment</span></span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true"></a><span class="co">#&gt;     singleStr: list</span></span>
-<span id="cb10-63"><a href="#cb10-63" aria-hidden="true"></a><span class="co">#&gt;     singleStr_globalState: M U M</span></span></code></pre></div>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true"></a><span class="co">#&gt;     set_params: function (params) </span></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true"></a><span class="co">#&gt;     set_parent_index: function (i) </span></span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true"></a><span class="co">#&gt;     set_singleStr: function (singStrList) </span></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true"></a><span class="co">#&gt;     testing_output: NULL</span></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true"></a><span class="co">#&gt;   Private:</span></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true"></a><span class="co">#&gt;     CFTP_info: NULL</span></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true"></a><span class="co">#&gt;     IWE_events: NULL</span></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true"></a><span class="co">#&gt;     IWE_rate: 0.1</span></span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true"></a><span class="co">#&gt;     SSE_evol: function (dt, testing = FALSE) </span></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true"></a><span class="co">#&gt;     get_next_id: function () </span></span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true"></a><span class="co">#&gt;     id: 28</span></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true"></a><span class="co">#&gt;     interval_evol: function (interval_length, dt, testing = FALSE) </span></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true"></a><span class="co">#&gt;     mu: 0.1</span></span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true"></a><span class="co">#&gt;     name: NULL</span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true"></a><span class="co">#&gt;     offspring_index: NULL</span></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true"></a><span class="co">#&gt;     own_index: NULL</span></span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true"></a><span class="co">#&gt;     parent_index: NULL</span></span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true"></a><span class="co">#&gt;     set_IWE_rate: function () </span></span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true"></a><span class="co">#&gt;     shared_env: environment</span></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true"></a><span class="co">#&gt;     singleStr: list</span></span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true"></a><span class="co">#&gt;     singleStr_globalState: M U M</span></span></code></pre></div>
 <p>To get the parameter values of a <code>combiStructureGenerator</code> object, it can alternatively be given as argument to the function <code>get_parameterValues()</code>.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>combiStr_object &lt;-<span class="st"> </span>initialD<span class="op">$</span>data</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a><span class="kw">get_parameterValues</span>(<span class="dt">rootData =</span> combiStr_object)</span>
@@ -669,13 +674,13 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <p>Each contained structure is an object of <code>singleStructureGenerator</code> and its methods can be used to get the contained information.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="co"># E.g. get the methylation equilibrium frequencies of the first singleStructureGenerator</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a>combiStr_object<span class="op">$</span><span class="kw">get_singleStr</span>(<span class="dv">1</span>)<span class="op">$</span><span class="kw">get_eqFreqs</span>()</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a><span class="co">#&gt; [1] 1.219735e-08 1.010246e-03 9.989897e-01</span></span></code></pre></div>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a><span class="co">#&gt; [1] 5.631072e-05 1.273172e-06 9.999424e-01</span></span></code></pre></div>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="co"># E.g. get the sequence of methylation states of the second singleStructureGenerator</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a><span class="co"># Encoded as: 1 for unmethylated, 2 for partially-methylated, 3 for methylated</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>combiStr_object<span class="op">$</span><span class="kw">get_singleStr</span>(<span class="dv">2</span>)<span class="op">$</span><span class="kw">get_seq</span>()</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a><span class="co">#&gt;   [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a><span class="co">#&gt;  [38] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a><span class="co">#&gt;  [75] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</span></span></code></pre></div>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a><span class="co">#&gt;  [75] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1</span></span></code></pre></div>
 </div>
 </div>
 <div id="simulation-of-data-evolution" class="section level2">
@@ -794,19 +799,19 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true"></a><span class="co"># each simulated island and non-island</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true"></a><span class="co"># Encoded as 0 for unmethylated, 0.5 for partially methylated and 1 for methylated</span></span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true"></a>root<span class="op">$</span>seq[[<span class="dv">1</span>]] <span class="co"># First sequence (non-island)</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true"></a><span class="co">#&gt;   [1] 0.5 1.0 0.5 0.0 1.0 0.0 1.0 1.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0</span></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true"></a><span class="co">#&gt;  [19] 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true"></a><span class="co">#&gt;  [37] 1.0 1.0 1.0 0.0 1.0 1.0 0.5 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true"></a><span class="co">#&gt;  [55] 1.0 1.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0</span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true"></a><span class="co">#&gt;  [73] 1.0 1.0 0.5 1.0 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0</span></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true"></a><span class="co">#&gt;  [91] 1.0 1.0 1.0 0.5 1.0 1.0 0.0 1.0 1.0 1.0</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true"></a><span class="co">#&gt;   [1] 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5 1.0 1.0 0.0 1.0</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true"></a><span class="co">#&gt;  [19] 0.5 1.0 1.0 1.0 1.0 1.0 0.0 1.0 0.0 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0 1.0</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true"></a><span class="co">#&gt;  [37] 1.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.0 1.0 0.0 1.0 1.0 0.5 1.0 1.0</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true"></a><span class="co">#&gt;  [55] 0.5 0.0 1.0 1.0 1.0 0.5 0.5 1.0 1.0 1.0 0.5 0.0 1.0 0.5 1.0 1.0 1.0 1.0</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true"></a><span class="co">#&gt;  [73] 1.0 1.0 0.0 1.0 0.0 1.0 1.0 1.0 0.5 1.0 1.0 1.0 1.0 1.0 1.0 0.5 1.0 1.0</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true"></a><span class="co">#&gt;  [91] 0.5 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.5</span></span>
 <span id="cb25-11"><a href="#cb25-11" aria-hidden="true"></a>root<span class="op">$</span>seq[[<span class="dv">2</span>]] <span class="co"># Second sequence (island)</span></span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true"></a><span class="co">#&gt;   [1] 0.0 0.0 0.0 0.0 0.0 0.5 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.5 0.0 0.0 0.0</span></span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true"></a><span class="co">#&gt;  [19] 0.5 0.5 0.0 0.5 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0</span></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true"></a><span class="co">#&gt;  [37] 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0</span></span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true"></a><span class="co">#&gt;  [55] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.5 0.0 0.5 0.0</span></span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true"></a><span class="co">#&gt;  [73] 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.5 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0</span></span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true"></a><span class="co">#&gt;  [91] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0</span></span></code></pre></div>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true"></a><span class="co">#&gt;   [1] 0.0 0.0 0.0 0.5 0.0 1.0 1.0 0.5 0.0 0.0 0.0 0.5 0.0 0.0 0.0 0.0 0.0 0.5</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true"></a><span class="co">#&gt;  [19] 0.0 0.5 0.0 0.0 0.5 1.0 0.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true"></a><span class="co">#&gt;  [37] 0.0 1.0 0.0 0.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.5 0.0 0.0 0.0 1.0 0.0 0.5</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true"></a><span class="co">#&gt;  [55] 0.5 1.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true"></a><span class="co">#&gt;  [73] 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.5 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true"></a><span class="co">#&gt;  [91] 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.0 0.5 0.0</span></span></code></pre></div>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true"></a><span class="co"># - A list with each element representing the methylation frequencies for the states: unmethylated, partially-methylated and methylated</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true"></a>root<span class="op">$</span>eqFreqs[[<span class="dv">1</span>]][<span class="dv">1</span>] <span class="co"># First structure of root (non-island) equilibrium frequency for unmethylated state</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true"></a><span class="co">#&gt; [1] 0.1</span></span>

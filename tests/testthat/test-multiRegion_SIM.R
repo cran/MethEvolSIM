@@ -4980,6 +4980,232 @@ test_that("treeMultiRegionSimulator CFTP_step_limit", {
                "Steps limit reached. Applying approximation for CFTP.")
 })
 
+# ── singleStructureGenerator$set_params() ─────────────────────────────────────
 
+test_that("singleStructureGenerator $set_params() input validation", {
+  obj <- singleStructureGenerator$new("U", 10)
+  valid_params <- get_parameterValues()
 
+  expect_error(obj$set_params("not a dataframe"),
+               info = "should error when params is not a dataframe")
+  expect_error(obj$set_params(data.frame(x = 1)),
+               info = "should error when params dataframe is missing required columns")
+  expect_error(obj$set_params(data.frame(alpha_pI = 0.1)),
+               info = "should error when params dataframe has only partial columns")
+})
 
+test_that("singleStructureGenerator $set_params() updates stored parameter values", {
+  infoStr <- data.frame(n = c(10, 20, 10), globalState = c("M", "U", "M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+  single_obj <- combi_obj$get_singleStr(2)
+
+  new_params <- get_parameterValues()
+  new_params$alpha_pI  <- 0.25
+  new_params$beta_pI   <- 2.0
+  new_params$alpha_mI  <- 0.3
+  new_params$beta_mI   <- 1.5
+  new_params$alpha_pNI <- 0.15
+  new_params$beta_pNI  <- 1.8
+  new_params$alpha_mNI <- 0.6
+  new_params$beta_mNI  <- 0.2
+  new_params$alpha_Ri  <- 0.5
+  new_params$iota      <- 0.2
+
+  single_obj$set_params(new_params)
+
+  expect_equal(single_obj$get_alpha_pI(),  0.25, info = "alpha_pI not updated")
+  expect_equal(single_obj$get_beta_pI(),   2.0,  info = "beta_pI not updated")
+  expect_equal(single_obj$get_alpha_mI(),  0.3,  info = "alpha_mI not updated")
+  expect_equal(single_obj$get_beta_mI(),   1.5,  info = "beta_mI not updated")
+  expect_equal(single_obj$get_alpha_pNI(), 0.15, info = "alpha_pNI not updated")
+  expect_equal(single_obj$get_beta_pNI(),  1.8,  info = "beta_pNI not updated")
+  expect_equal(single_obj$get_alpha_mNI(), 0.6,  info = "alpha_mNI not updated")
+  expect_equal(single_obj$get_beta_mNI(),  0.2,  info = "beta_mNI not updated")
+  expect_equal(single_obj$get_alpha_Ri(),  0.5,  info = "alpha_Ri not updated")
+  expect_equal(single_obj$get_iota(),      0.2,  info = "iota not updated")
+})
+
+test_that("singleStructureGenerator $set_params() recomputes Ri_values and Rc_values", {
+  infoStr <- data.frame(n = c(50), globalState = c("M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+  single_obj <- combi_obj$get_singleStr(1)
+
+  Ri_before <- single_obj$get_Ri_values()
+  Rc_before <- get_private(single_obj)$Rc_values
+
+  new_params <- get_parameterValues()
+  new_params$alpha_Ri <- 0.5
+  new_params$iota     <- 0.2
+  single_obj$set_params(new_params)
+
+  Ri_after <- single_obj$get_Ri_values()
+  Rc_after <- get_private(single_obj)$Rc_values
+
+  expect_false(isTRUE(all.equal(Ri_before, Ri_after)),
+               info = "Ri_values should change after set_params with new alpha_Ri and iota")
+  expect_false(isTRUE(all.equal(Rc_before$Rcl, Rc_after$Rcl)),
+               info = "Rc_values$Rcl should change after set_params with new iota")
+})
+
+test_that("singleStructureGenerator $set_params() preserves seq and eqFreqs", {
+  infoStr <- data.frame(n = c(20), globalState = c("U"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+  single_obj <- combi_obj$get_singleStr(1)
+
+  seq_before    <- single_obj$get_seq()
+  eqFreqs_before <- single_obj$get_eqFreqs()
+
+  new_params <- get_parameterValues()
+  new_params$alpha_Ri <- 0.5
+  new_params$iota     <- 0.2
+  single_obj$set_params(new_params)
+
+  expect_equal(single_obj$get_seq(),      seq_before,    info = "seq should be unchanged after set_params")
+  expect_equal(single_obj$get_eqFreqs(),  eqFreqs_before, info = "eqFreqs should be unchanged after set_params")
+})
+
+test_that("singleStructureGenerator $set_params() produces ratetree consistent with new Q", {
+  # Use a small structure so we can verify all leaf rates individually
+  infoStr <- data.frame(n = c(5), globalState = c("M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+  single_obj <- combi_obj$get_singleStr(1)
+
+  new_params <- get_parameterValues()
+  new_params$alpha_Ri <- 0.5
+  new_params$iota     <- 0.2
+  single_obj$set_params(new_params)
+
+  # Independently reconstruct the expected total rate from Q, siteR, neighbSt, seq
+  seq_vec     <- single_obj$get_seq()
+  Q_new       <- single_obj$get_Q()
+  siteR_vec   <- get_private(single_obj)$siteR
+  neighbSt_vec <- get_private(single_obj)$neighbSt
+
+  expected_leaf_rates <- sapply(seq_along(seq_vec), function(i) {
+    abs(Q_new[[siteR_vec[i]]][[neighbSt_vec[i]]][seq_vec[i], seq_vec[i]])
+  })
+  expected_total_rate <- sum(expected_leaf_rates)
+  actual_total_rate   <- get_private(single_obj)$ratetree[[1]][1]
+
+  expect_equal(actual_total_rate, expected_total_rate, tolerance = 1e-10,
+               info = "ratetree total rate should match sum of leaf rates after set_params")
+})
+
+# ── combiStructureGenerator$set_params() ──────────────────────────────────────
+
+test_that("combiStructureGenerator $set_params() input validation", {
+  infoStr <- data.frame(n = c(10, 20, 10), globalState = c("M", "U", "M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+
+  expect_error(combi_obj$set_params("not a dataframe"),
+               info = "should error when params is not a dataframe")
+  expect_error(combi_obj$set_params(data.frame(x = 1)),
+               info = "should error when params dataframe is missing required columns")
+})
+
+test_that("combiStructureGenerator $set_params() updates mu and recomputes IWE_rate", {
+  infoStr <- data.frame(n = c(10, 20, 10), globalState = c("M", "U", "M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+
+  # 1 island (globalState "U")
+  new_params <- get_parameterValues()
+  new_params$mu <- 0.05
+  combi_obj$set_params(new_params)
+
+  expect_equal(combi_obj$get_mu(), 0.05,
+               info = "mu not updated after set_params")
+  expect_equal(get_private(combi_obj)$IWE_rate, 0.05 * 1,
+               info = "IWE_rate not recomputed (expected mu * n_islands = 0.05 * 1)")
+
+  # 3 islands
+  infoStr3 <- data.frame(n = c(10, 20, 10), globalState = c("U", "U", "U"))
+  combi_obj3 <- combiStructureGenerator$new(infoStr3)
+  new_params$mu <- 0.2
+  combi_obj3$set_params(new_params)
+
+  expect_equal(combi_obj3$get_mu(), 0.2,
+               info = "mu not updated (3-island case)")
+  expect_equal(get_private(combi_obj3)$IWE_rate, 0.2 * 3,
+               info = "IWE_rate not recomputed (expected 0.2 * 3)")
+})
+
+test_that("combiStructureGenerator $set_params() propagates params to all singleStr", {
+  infoStr <- data.frame(n = c(10, 20, 10), globalState = c("M", "U", "M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+
+  new_params <- get_parameterValues()
+  new_params$alpha_Ri  <- 0.5
+  new_params$iota      <- 0.2
+  new_params$alpha_pI  <- 0.25
+  combi_obj$set_params(new_params)
+
+  for (i in 1:combi_obj$get_singleStr_number()) {
+    expect_equal(combi_obj$get_singleStr(i)$get_alpha_Ri(), 0.5,
+                 info = paste("alpha_Ri not propagated to singleStr", i))
+    expect_equal(combi_obj$get_singleStr(i)$get_iota(), 0.2,
+                 info = paste("iota not propagated to singleStr", i))
+    expect_equal(combi_obj$get_singleStr(i)$get_alpha_pI(), 0.25,
+                 info = paste("alpha_pI not propagated to singleStr", i))
+  }
+})
+
+test_that("combiStructureGenerator $set_params() preserves seq and eqFreqs in all singleStr", {
+  infoStr <- data.frame(n = c(10, 20, 10), globalState = c("M", "U", "M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+
+  seq_before    <- lapply(1:3, function(i) combi_obj$get_singleStr(i)$get_seq())
+  eqFreqs_before <- lapply(1:3, function(i) combi_obj$get_singleStr(i)$get_eqFreqs())
+
+  new_params <- get_parameterValues()
+  new_params$alpha_Ri <- 0.5
+  new_params$iota     <- 0.2
+  combi_obj$set_params(new_params)
+
+  for (i in 1:3) {
+    expect_equal(combi_obj$get_singleStr(i)$get_seq(), seq_before[[i]],
+                 info = paste("seq changed in singleStr", i, "after set_params"))
+    expect_equal(combi_obj$get_singleStr(i)$get_eqFreqs(), eqFreqs_before[[i]],
+                 info = paste("eqFreqs changed in singleStr", i, "after set_params"))
+  }
+})
+
+test_that("combiStructureGenerator $set_params() with mu=0 suppresses IWE in branch_evol", {
+  # Structure with islands so IWE would normally occur on a long branch
+  infoStr <- data.frame(n = c(100, 50, 100), globalState = c("M", "U", "M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+
+  new_params <- get_parameterValues()
+  new_params$mu <- 0
+  combi_obj$set_params(new_params)
+
+  expect_equal(combi_obj$get_mu(), 0,
+               info = "mu should be 0 after set_params")
+  expect_equal(get_private(combi_obj)$IWE_rate, 0,
+               info = "IWE_rate should be 0 when mu=0")
+
+  # With IWE_rate = 0, branch_evol must report no IWE events regardless of branch length
+  output <- combi_obj$branch_evol(branch_length = 100, dt = 0.01, testing = TRUE)
+  expect_false(output$IWE_event,
+               info = "branch_evol should report no IWE events when mu=0")
+  expect_equal(combi_obj$get_IWE_events(), "Simulation without IWE events.",
+               info = "IWE_events should be 'Simulation without IWE events.' when mu=0")
+})
+
+test_that("combiStructureGenerator $set_params() then copy() preserves new params", {
+  infoStr <- data.frame(n = c(10, 20, 10), globalState = c("M", "U", "M"))
+  combi_obj <- combiStructureGenerator$new(infoStr)
+
+  new_params <- get_parameterValues()
+  new_params$mu      <- 0
+  new_params$alpha_Ri <- 0.5
+  combi_obj$set_params(new_params)
+
+  combi_copy <- combi_obj$copy()
+
+  expect_equal(combi_copy$get_mu(), 0,
+               info = "copy() should preserve mu=0 set by set_params")
+  for (i in 1:3) {
+    expect_equal(combi_copy$get_singleStr(i)$get_alpha_Ri(), 0.5,
+                 info = paste("copy() should preserve alpha_Ri in singleStr", i))
+  }
+})

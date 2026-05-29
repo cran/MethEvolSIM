@@ -7,60 +7,61 @@
 an R6 class representing a single genomic structure
 }
 \section{Public fields}{
-\if{html}{\out{<div class="r6-fields">}}
-\describe{
-\item{\code{testing_output}}{Public attribute: Testing output for initialize}
-}
-\if{html}{\out{</div>}}
+  \if{html}{\out{<div class="r6-fields">}}
+  \describe{
+    \item{\code{testing_output}}{Public attribute: Testing output for initialize}
+  }
+  \if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
-\itemize{
-\item \href{#method-singleStructureGenerator-init_neighbSt}{\code{singleStructureGenerator$init_neighbSt()}}
-\item \href{#method-singleStructureGenerator-initialize_ratetree}{\code{singleStructureGenerator$initialize_ratetree()}}
-\item \href{#method-singleStructureGenerator-new}{\code{singleStructureGenerator$new()}}
-\item \href{#method-singleStructureGenerator-set_myCombiStructure}{\code{singleStructureGenerator$set_myCombiStructure()}}
-\item \href{#method-singleStructureGenerator-get_seq}{\code{singleStructureGenerator$get_seq()}}
-\item \href{#method-singleStructureGenerator-get_seqFirstPos}{\code{singleStructureGenerator$get_seqFirstPos()}}
-\item \href{#method-singleStructureGenerator-get_seq2ndPos}{\code{singleStructureGenerator$get_seq2ndPos()}}
-\item \href{#method-singleStructureGenerator-get_seqLastPos}{\code{singleStructureGenerator$get_seqLastPos()}}
-\item \href{#method-singleStructureGenerator-get_seq2ndButLastPos}{\code{singleStructureGenerator$get_seq2ndButLastPos()}}
-\item \href{#method-singleStructureGenerator-get_combiStructure_index}{\code{singleStructureGenerator$get_combiStructure_index()}}
-\item \href{#method-singleStructureGenerator-update_interStr_firstNeighbSt}{\code{singleStructureGenerator$update_interStr_firstNeighbSt()}}
-\item \href{#method-singleStructureGenerator-update_interStr_lastNeighbSt}{\code{singleStructureGenerator$update_interStr_lastNeighbSt()}}
-\item \href{#method-singleStructureGenerator-get_eqFreqs}{\code{singleStructureGenerator$get_eqFreqs()}}
-\item \href{#method-singleStructureGenerator-SSE_evol}{\code{singleStructureGenerator$SSE_evol()}}
-\item \href{#method-singleStructureGenerator-get_transMat}{\code{singleStructureGenerator$get_transMat()}}
-\item \href{#method-singleStructureGenerator-IWE_evol}{\code{singleStructureGenerator$IWE_evol()}}
-\item \href{#method-singleStructureGenerator-get_alpha_pI}{\code{singleStructureGenerator$get_alpha_pI()}}
-\item \href{#method-singleStructureGenerator-get_beta_pI}{\code{singleStructureGenerator$get_beta_pI()}}
-\item \href{#method-singleStructureGenerator-get_alpha_mI}{\code{singleStructureGenerator$get_alpha_mI()}}
-\item \href{#method-singleStructureGenerator-get_beta_mI}{\code{singleStructureGenerator$get_beta_mI()}}
-\item \href{#method-singleStructureGenerator-get_alpha_pNI}{\code{singleStructureGenerator$get_alpha_pNI()}}
-\item \href{#method-singleStructureGenerator-get_beta_pNI}{\code{singleStructureGenerator$get_beta_pNI()}}
-\item \href{#method-singleStructureGenerator-get_alpha_mNI}{\code{singleStructureGenerator$get_alpha_mNI()}}
-\item \href{#method-singleStructureGenerator-get_beta_mNI}{\code{singleStructureGenerator$get_beta_mNI()}}
-\item \href{#method-singleStructureGenerator-get_alpha_Ri}{\code{singleStructureGenerator$get_alpha_Ri()}}
-\item \href{#method-singleStructureGenerator-get_iota}{\code{singleStructureGenerator$get_iota()}}
-\item \href{#method-singleStructureGenerator-get_Ri_values}{\code{singleStructureGenerator$get_Ri_values()}}
-\item \href{#method-singleStructureGenerator-get_Q}{\code{singleStructureGenerator$get_Q()}}
-\item \href{#method-singleStructureGenerator-get_siteR}{\code{singleStructureGenerator$get_siteR()}}
-\item \href{#method-singleStructureGenerator-get_neighbSt}{\code{singleStructureGenerator$get_neighbSt()}}
-\item \href{#method-singleStructureGenerator-update_ratetree_otherStr}{\code{singleStructureGenerator$update_ratetree_otherStr()}}
-\item \href{#method-singleStructureGenerator-get_Qi}{\code{singleStructureGenerator$get_Qi()}}
-\item \href{#method-singleStructureGenerator-get_seqSt_leftneighb}{\code{singleStructureGenerator$get_seqSt_leftneighb()}}
-\item \href{#method-singleStructureGenerator-get_seqSt_rightneighb}{\code{singleStructureGenerator$get_seqSt_rightneighb()}}
-\item \href{#method-singleStructureGenerator-cftp_all_equal}{\code{singleStructureGenerator$cftp_all_equal()}}
-\item \href{#method-singleStructureGenerator-set_seqSt_update_neighbSt}{\code{singleStructureGenerator$set_seqSt_update_neighbSt()}}
-\item \href{#method-singleStructureGenerator-reset_seq}{\code{singleStructureGenerator$reset_seq()}}
-\item \href{#method-singleStructureGenerator-clone}{\code{singleStructureGenerator$clone()}}
-}
+  \itemize{
+    \item \href{#method-singleStructureGenerator-init_neighbSt}{\code{singleStructureGenerator$init_neighbSt()}}
+    \item \href{#method-singleStructureGenerator-initialize_ratetree}{\code{singleStructureGenerator$initialize_ratetree()}}
+    \item \href{#method-singleStructureGenerator-initialize}{\code{singleStructureGenerator$new()}}
+    \item \href{#method-singleStructureGenerator-set_myCombiStructure}{\code{singleStructureGenerator$set_myCombiStructure()}}
+    \item \href{#method-singleStructureGenerator-get_seq}{\code{singleStructureGenerator$get_seq()}}
+    \item \href{#method-singleStructureGenerator-get_seqFirstPos}{\code{singleStructureGenerator$get_seqFirstPos()}}
+    \item \href{#method-singleStructureGenerator-get_seq2ndPos}{\code{singleStructureGenerator$get_seq2ndPos()}}
+    \item \href{#method-singleStructureGenerator-get_seqLastPos}{\code{singleStructureGenerator$get_seqLastPos()}}
+    \item \href{#method-singleStructureGenerator-get_seq2ndButLastPos}{\code{singleStructureGenerator$get_seq2ndButLastPos()}}
+    \item \href{#method-singleStructureGenerator-get_combiStructure_index}{\code{singleStructureGenerator$get_combiStructure_index()}}
+    \item \href{#method-singleStructureGenerator-update_interStr_firstNeighbSt}{\code{singleStructureGenerator$update_interStr_firstNeighbSt()}}
+    \item \href{#method-singleStructureGenerator-update_interStr_lastNeighbSt}{\code{singleStructureGenerator$update_interStr_lastNeighbSt()}}
+    \item \href{#method-singleStructureGenerator-get_eqFreqs}{\code{singleStructureGenerator$get_eqFreqs()}}
+    \item \href{#method-singleStructureGenerator-SSE_evol}{\code{singleStructureGenerator$SSE_evol()}}
+    \item \href{#method-singleStructureGenerator-get_transMat}{\code{singleStructureGenerator$get_transMat()}}
+    \item \href{#method-singleStructureGenerator-IWE_evol}{\code{singleStructureGenerator$IWE_evol()}}
+    \item \href{#method-singleStructureGenerator-get_alpha_pI}{\code{singleStructureGenerator$get_alpha_pI()}}
+    \item \href{#method-singleStructureGenerator-get_beta_pI}{\code{singleStructureGenerator$get_beta_pI()}}
+    \item \href{#method-singleStructureGenerator-get_alpha_mI}{\code{singleStructureGenerator$get_alpha_mI()}}
+    \item \href{#method-singleStructureGenerator-get_beta_mI}{\code{singleStructureGenerator$get_beta_mI()}}
+    \item \href{#method-singleStructureGenerator-get_alpha_pNI}{\code{singleStructureGenerator$get_alpha_pNI()}}
+    \item \href{#method-singleStructureGenerator-get_beta_pNI}{\code{singleStructureGenerator$get_beta_pNI()}}
+    \item \href{#method-singleStructureGenerator-get_alpha_mNI}{\code{singleStructureGenerator$get_alpha_mNI()}}
+    \item \href{#method-singleStructureGenerator-get_beta_mNI}{\code{singleStructureGenerator$get_beta_mNI()}}
+    \item \href{#method-singleStructureGenerator-get_alpha_Ri}{\code{singleStructureGenerator$get_alpha_Ri()}}
+    \item \href{#method-singleStructureGenerator-get_iota}{\code{singleStructureGenerator$get_iota()}}
+    \item \href{#method-singleStructureGenerator-get_Ri_values}{\code{singleStructureGenerator$get_Ri_values()}}
+    \item \href{#method-singleStructureGenerator-set_params}{\code{singleStructureGenerator$set_params()}}
+    \item \href{#method-singleStructureGenerator-get_Q}{\code{singleStructureGenerator$get_Q()}}
+    \item \href{#method-singleStructureGenerator-get_siteR}{\code{singleStructureGenerator$get_siteR()}}
+    \item \href{#method-singleStructureGenerator-get_neighbSt}{\code{singleStructureGenerator$get_neighbSt()}}
+    \item \href{#method-singleStructureGenerator-update_ratetree_otherStr}{\code{singleStructureGenerator$update_ratetree_otherStr()}}
+    \item \href{#method-singleStructureGenerator-get_Qi}{\code{singleStructureGenerator$get_Qi()}}
+    \item \href{#method-singleStructureGenerator-get_seqSt_leftneighb}{\code{singleStructureGenerator$get_seqSt_leftneighb()}}
+    \item \href{#method-singleStructureGenerator-get_seqSt_rightneighb}{\code{singleStructureGenerator$get_seqSt_rightneighb()}}
+    \item \href{#method-singleStructureGenerator-cftp_all_equal}{\code{singleStructureGenerator$cftp_all_equal()}}
+    \item \href{#method-singleStructureGenerator-set_seqSt_update_neighbSt}{\code{singleStructureGenerator$set_seqSt_update_neighbSt()}}
+    \item \href{#method-singleStructureGenerator-reset_seq}{\code{singleStructureGenerator$reset_seq()}}
+    \item \href{#method-singleStructureGenerator-clone}{\code{singleStructureGenerator$clone()}}
+  }
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-init_neighbSt"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-init_neighbSt}{}}}
-\subsection{Method \code{init_neighbSt()}}{
-Public method: Initialization of $neighbSt
+\subsection{\code{singleStructureGenerator$init_neighbSt()}}{
+  Public method: Initialization of $neighbSt
 
 This fuction initiates each CpG position $neighbSt as encoded in $mapNeighbSt_matrix
 
@@ -71,38 +72,43 @@ the $neighbSt of that position of the first singleStr instance is initialized wh
 
 Positions at the edge of the entire simulated sequence use
 their only neighbor as both neighbors.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$init_neighbSt()}\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$init_neighbSt()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    NULL
+  }
 }
 
-\subsection{Returns}{
-NULL
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-initialize_ratetree"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-initialize_ratetree}{}}}
-\subsection{Method \code{initialize_ratetree()}}{
-Public method: Initialization of $ratetree
+\subsection{\code{singleStructureGenerator$initialize_ratetree()}}{
+  Public method: Initialization of $ratetree
 
 This function initializes $ratetree
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$initialize_ratetree()}\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$initialize_ratetree()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    NULL
+  }
 }
 
-\subsection{Returns}{
-NULL
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-singleStructureGenerator-new"></a>}}
-\if{latex}{\out{\hypertarget{method-singleStructureGenerator-new}{}}}
-\subsection{Method \code{new()}}{
-Create a new singleStructureGenerator object.
+\if{html}{\out{<a id="method-singleStructureGenerator-initialize"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-initialize}{}}}
+\subsection{\code{singleStructureGenerator$new()}}{
+  Create a new singleStructureGenerator object.
 
 Note that this object is typically generated withing a combiStructureGenerator object.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$new(
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$new(
   globalState,
   n,
   eqFreqs = NULL,
@@ -110,290 +116,302 @@ Note that this object is typically generated withing a combiStructureGenerator o
   combiStr_index = NULL,
   params = NULL,
   testing = FALSE
-)}\if{html}{\out{</div>}}
+)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{globalState}}{Character. Structure's favored global state: "M" for methylated (island structures) / "U" for unmethylated (non-island structures).}
+      \item{\code{n}}{Numerical Value. Number of CpG positions}
+      \item{\code{eqFreqs}}{Default NULL. When given: numerical vector with structure's methylation state equilibrium frequencies (for unmethylated, partially methylated and methylated)}
+      \item{\code{combiStr}}{Default NULL. When initiated from combiStructureGenerator: object of class combiStructureGenerator containing it}
+      \item{\code{combiStr_index}}{Default NULL. When initiated from combiStructureGenerator: index in Object of class combiStructureGenerator}
+      \item{\code{params}}{Default NULL. When given: data frame containing model parameters}
+      \item{\code{testing}}{Default FALSE. TRUE for writing in public field of new instance $testing_output}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    A new \code{singleStructureGenerator} object.
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{globalState}}{Character. Structure's favored global state: "M" for methylated (island structures) / "U" for unmethylated (non-island structures).}
-
-\item{\code{n}}{Numerical Value. Number of CpG positions}
-
-\item{\code{eqFreqs}}{Default NULL. When given: numerical vector with structure's methylation state equilibrium frequencies (for unmethylated, partially methylated and methylated)}
-
-\item{\code{combiStr}}{Default NULL. When initiated from combiStructureGenerator: object of class combiStructureGenerator containing it}
-
-\item{\code{combiStr_index}}{Default NULL. When initiated from combiStructureGenerator: index in Object of class combiStructureGenerator}
-
-\item{\code{params}}{Default NULL. When given: data frame containing model parameters}
-
-\item{\code{testing}}{Default FALSE. TRUE for writing in public field of new instance $testing_output}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-A new \code{singleStructureGenerator} object.
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-set_myCombiStructure"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-set_myCombiStructure}{}}}
-\subsection{Method \code{set_myCombiStructure()}}{
-Public method: Set my_combiStructure. Assigns given combi instance to private field my_combiStructure
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$set_myCombiStructure(combi)}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$set_myCombiStructure()}}{
+  Public method: Set my_combiStructure. Assigns given combi instance to private field my_combiStructure
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$set_myCombiStructure(combi)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{combi}}{instance of combiStructureGenerator}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    NULL
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{combi}}{instance of combiStructureGenerator}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-NULL
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_seq"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seq}{}}}
-\subsection{Method \code{get_seq()}}{
-Public method: Get object's methylation state sequence
+\subsection{\code{singleStructureGenerator$get_seq()}}{
+  Public method: Get object's methylation state sequence
 
 Encoded with 1 for unmethylated, 2 for partially methylated and 3 for methylated
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seq()}\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_seq()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    vector with equilibrium frequencies of unmethylated, partially methylated and methylated
+  }
 }
 
-\subsection{Returns}{
-vector with equilibrium frequencies of unmethylated, partially methylated and methylated
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_seqFirstPos"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seqFirstPos}{}}}
-\subsection{Method \code{get_seqFirstPos()}}{
-Public method: Get first sequence position methylation state
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seqFirstPos()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_seqFirstPos()}}{
+  Public method: Get first sequence position methylation state
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_seqFirstPos()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    numerical encoding of first position's methylation state
+  }
 }
 
-\subsection{Returns}{
-numerical encoding of first position's methylation state
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_seq2ndPos"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seq2ndPos}{}}}
-\subsection{Method \code{get_seq2ndPos()}}{
-Public method: Get second sequence position methylation state
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seq2ndPos()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_seq2ndPos()}}{
+  Public method: Get second sequence position methylation state
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_seq2ndPos()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    numerical encoding of second position's methylation state. NULL if position does not exist
+  }
 }
 
-\subsection{Returns}{
-numerical encoding of second position's methylation state. NULL if position does not exist
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_seqLastPos"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seqLastPos}{}}}
-\subsection{Method \code{get_seqLastPos()}}{
-Public method: Get first sequence position methylation state
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seqLastPos()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_seqLastPos()}}{
+  Public method: Get first sequence position methylation state
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_seqLastPos()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    numerical encoding of first position's methylation state
+  }
 }
 
-\subsection{Returns}{
-numerical encoding of first position's methylation state
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_seq2ndButLastPos"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seq2ndButLastPos}{}}}
-\subsection{Method \code{get_seq2ndButLastPos()}}{
-Public method: Get second but last sequence position methylation state
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seq2ndButLastPos()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_seq2ndButLastPos()}}{
+  Public method: Get second but last sequence position methylation state
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_seq2ndButLastPos()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    numerical encoding of second but last position's methylation state. NULL if position does not exist
+  }
 }
 
-\subsection{Returns}{
-numerical encoding of second but last position's methylation state. NULL if position does not exist
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_combiStructure_index"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_combiStructure_index}{}}}
-\subsection{Method \code{get_combiStructure_index()}}{
-Public method: Get index in object of class combiStructureGenerator
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_combiStructure_index()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_combiStructure_index()}}{
+  Public method: Get index in object of class combiStructureGenerator
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_combiStructure_index()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    index in object of class combiStructureGenerator
+  }
 }
 
-\subsection{Returns}{
-index in object of class combiStructureGenerator
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-update_interStr_firstNeighbSt"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-update_interStr_firstNeighbSt}{}}}
-\subsection{Method \code{update_interStr_firstNeighbSt()}}{
-Public method: Update neighbSt of next singleStructureGenerator object within combiStructureGenerator object
+\subsection{\code{singleStructureGenerator$update_interStr_firstNeighbSt()}}{
+  Public method: Update neighbSt of next singleStructureGenerator object within combiStructureGenerator object
 
 This function is used when the last $seq position of a singleStructureGenerator object
 changes methylation state to update the neighbSt position
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$update_interStr_firstNeighbSt(
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$update_interStr_firstNeighbSt(
   leftNeighb_seqSt,
   rightNeighb_seqSt
-)}\if{html}{\out{</div>}}
+)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{leftNeighb_seqSt}}{$seq state of left neighbor (left neighbor is in previous singleStructureGenerator object)}
+      \item{\code{rightNeighb_seqSt}}{$seq state of right neighbor}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    NULL
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{leftNeighb_seqSt}}{$seq state of left neighbor (left neighbor is in previous singleStructureGenerator object)}
-
-\item{\code{rightNeighb_seqSt}}{$seq state of right neighbor}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-NULL
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-update_interStr_lastNeighbSt"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-update_interStr_lastNeighbSt}{}}}
-\subsection{Method \code{update_interStr_lastNeighbSt()}}{
-Public method: Update neighbSt of previous singleStructureGenerator object within combiStructureGenerator object
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$update_interStr_lastNeighbSt(
+\subsection{\code{singleStructureGenerator$update_interStr_lastNeighbSt()}}{
+  Public method: Update neighbSt of previous singleStructureGenerator object within combiStructureGenerator object
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$update_interStr_lastNeighbSt(
   leftNeighb_seqSt,
   rightNeighb_seqSt
-)}\if{html}{\out{</div>}}
+)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{leftNeighb_seqSt}}{$seq state of right neighbor (left neighbor is in next singleStructureGenerator object)}
+      \item{\code{rightNeighb_seqSt}}{$seq state of right neighbor}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    NULL
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{leftNeighb_seqSt}}{$seq state of right neighbor (left neighbor is in next singleStructureGenerator object)}
-
-\item{\code{rightNeighb_seqSt}}{$seq state of right neighbor}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-NULL
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_eqFreqs"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_eqFreqs}{}}}
-\subsection{Method \code{get_eqFreqs()}}{
-Public method: Get object's equilibrium Frequencies
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_eqFreqs()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_eqFreqs()}}{
+  Public method: Get object's equilibrium Frequencies
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_eqFreqs()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    vector with equilibrium frequencies of unmethylated, partially methylated and methylated
+  }
 }
 
-\subsection{Returns}{
-vector with equilibrium frequencies of unmethylated, partially methylated and methylated
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-SSE_evol"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-SSE_evol}{}}}
-\subsection{Method \code{SSE_evol()}}{
-Public method. Simulate how CpG dinucleotide methylation state changes due to the SSE process
+\subsection{\code{singleStructureGenerator$SSE_evol()}}{
+  Public method. Simulate how CpG dinucleotide methylation state changes due to the SSE process
 along a time step of length dt
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$SSE_evol(dt, testing = FALSE)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{dt}}{time step length.}
-
-\item{\code{testing}}{logical value for testing purposes. Default FALSE.}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-default NULL. If testing TRUE it returns a list with the debugNov3.outnumber of events sampled and a
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$SSE_evol(dt, testing = FALSE)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{dt}}{time step length.}
+      \item{\code{testing}}{logical value for testing purposes. Default FALSE.}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    default NULL. If testing TRUE it returns a list with the number of events sampled and a
 dataframe with the position(s) affected, new state and old methylation state.
+  }
 }
-}
+
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_transMat"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_transMat}{}}}
-\subsection{Method \code{get_transMat()}}{
-Public Method. Get a transition matrix
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_transMat(
+\subsection{\code{singleStructureGenerator$get_transMat()}}{
+  Public Method. Get a transition matrix
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_transMat(
   old_eqFreqs,
   new_eqFreqs,
   info,
   testing = FALSE
-)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{old_eqFreqs}}{numeric vector with 3 frequency values (for old u, p and m)}
-
-\item{\code{new_eqFreqs}}{numeric vector with 3 frequency values (for new u, p and m)}
-
-\item{\code{info}}{character string to indicate where the method is being called}
-
-\item{\code{testing}}{logical value for testing purposes. Default FALSE.}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Details}{
-Given a tripple of old equilibrium frequencies and new equilibrium frequencies, generates the corresponding transition matrix.
-}
-
-\subsection{Returns}{
-transMat. The transition matrix. If testing = TRUE it returns a list.
+)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{old_eqFreqs}}{numeric vector with 3 frequency values (for old u, p and m)}
+      \item{\code{new_eqFreqs}}{numeric vector with 3 frequency values (for new u, p and m)}
+      \item{\code{info}}{character string to indicate where the method is being called}
+      \item{\code{testing}}{logical value for testing purposes. Default FALSE.}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Details}{
+    Given a tripple of old equilibrium frequencies and new equilibrium frequencies, generates the corresponding transition matrix.
+  }
+  \subsection{Returns}{
+    transMat. The transition matrix. If testing = TRUE it returns a list.
 If there was a change in the equilibrium frequencies the list contains the following 7 elements, if not it contains the first 3 elements:
 \describe{
 \item{\code{transMat}}{transition matrix}
 \item{\code{case}}{The applied case.}
 }
+  }
 }
-}
+
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-IWE_evol"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-IWE_evol}{}}}
-\subsection{Method \code{IWE_evol()}}{
-Public Method. Simulate IWE Events
+\subsection{\code{singleStructureGenerator$IWE_evol()}}{
+  Public Method. Simulate IWE Events
 
 Simulates how CpG Islands' methylation state frequencies change and simultaneous sites change methylation state
 along a branch of length t according to the SSE-IWE model.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$IWE_evol(testing = FALSE)}\if{html}{\out{</div>}}
-}
-
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{testing}}{logical value for testing purposes. Default FALSE.}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Details}{
-The function checks if the methylation equilibrium frequencies (\code{eqFreqs}) and sequence observed
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$IWE_evol(testing = FALSE)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{testing}}{logical value for testing purposes. Default FALSE.}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Details}{
+    The function checks if the methylation equilibrium frequencies (\code{eqFreqs}) and sequence observed
 frequencies (\code{obsFreqs}) change after the IWE event. If there is a change in either
 frequencies, the corresponding change flag \code{eqFreqsChange}
 in the \code{infoIWE} list will be set to \code{TRUE}.
-}
-
-\subsection{Returns}{
-If testing = TRUE it returns a list.
+  }
+  \subsection{Returns}{
+    If testing = TRUE it returns a list.
 If there was a change in the equilibrium frequencies the list contains the following 7 elements, if not it contains the first 3 elements:
 \describe{
 \item{\code{eqFreqsChange}}{logical indicating if there was a change in the equilibrium frequencies.}
@@ -404,387 +422,463 @@ If there was a change in the equilibrium frequencies the list contains the follo
 \item{\code{IWE_case}}{Description of the IWE event case.}
 \item{\code{Mk}}{Transition matrix used for the IWE event.}
 }
+  }
 }
-}
+
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_alpha_pI"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_alpha_pI}{}}}
-\subsection{Method \code{get_alpha_pI()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_alpha_pI()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_alpha_pI()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_alpha_pI()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter alpha_pI for sampling island equilibrium frequencies
+  }
 }
 
-\subsection{Returns}{
-Model parameter alpha_pI for sampling island equilibrium frequencies
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_beta_pI"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_beta_pI}{}}}
-\subsection{Method \code{get_beta_pI()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_beta_pI()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_beta_pI()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_beta_pI()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for sampling island equilibrium frequencies
+  }
 }
 
-\subsection{Returns}{
-Model parameter for sampling island equilibrium frequencies
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_alpha_mI"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_alpha_mI}{}}}
-\subsection{Method \code{get_alpha_mI()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_alpha_mI()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_alpha_mI()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_alpha_mI()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for sampling island equilibrium frequencies
+  }
 }
 
-\subsection{Returns}{
-Model parameter for sampling island equilibrium frequencies
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_beta_mI"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_beta_mI}{}}}
-\subsection{Method \code{get_beta_mI()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_beta_mI()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_beta_mI()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_beta_mI()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for sampling island equilibrium frequencies
+  }
 }
 
-\subsection{Returns}{
-Model parameter for sampling island equilibrium frequencies
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_alpha_pNI"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_alpha_pNI}{}}}
-\subsection{Method \code{get_alpha_pNI()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_alpha_pNI()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_alpha_pNI()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_alpha_pNI()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for sampling non-island equilibrium frequencies
+  }
 }
 
-\subsection{Returns}{
-Model parameter for sampling non-island equilibrium frequencies
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_beta_pNI"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_beta_pNI}{}}}
-\subsection{Method \code{get_beta_pNI()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_beta_pNI()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_beta_pNI()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_beta_pNI()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for sampling non-island equilibrium frequencies
+  }
 }
 
-\subsection{Returns}{
-Model parameter for sampling non-island equilibrium frequencies
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_alpha_mNI"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_alpha_mNI}{}}}
-\subsection{Method \code{get_alpha_mNI()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_alpha_mNI()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_alpha_mNI()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_alpha_mNI()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for sampling non-island equilibrium frequencies
+  }
 }
 
-\subsection{Returns}{
-Model parameter for sampling non-island equilibrium frequencies
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_beta_mNI"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_beta_mNI}{}}}
-\subsection{Method \code{get_beta_mNI()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_beta_mNI()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_beta_mNI()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_beta_mNI()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for sampling non-island equilibrium frequencies
+  }
 }
 
-\subsection{Returns}{
-Model parameter for sampling non-island equilibrium frequencies
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_alpha_Ri"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_alpha_Ri}{}}}
-\subsection{Method \code{get_alpha_Ri()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_alpha_Ri()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_alpha_Ri()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_alpha_Ri()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for gamma distribution shape to initialize the 3 $Ri_values
+  }
 }
 
-\subsection{Returns}{
-Model parameter for gamma distribution shape to initialize the 3 $Ri_values
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_iota"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_iota}{}}}
-\subsection{Method \code{get_iota()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_iota()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_iota()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_iota()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Model parameter for gamma distribution expected value to initialize the 3 $Ri_values
+  }
 }
 
-\subsection{Returns}{
-Model parameter for gamma distribution expected value to initialize the 3 $Ri_values
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_Ri_values"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_Ri_values}{}}}
-\subsection{Method \code{get_Ri_values()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_Ri_values()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_Ri_values()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_Ri_values()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    The 3 $Ri_values
+  }
 }
 
-\subsection{Returns}{
-The 3 $Ri_values
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-singleStructureGenerator-set_params"></a>}}
+\if{latex}{\out{\hypertarget{method-singleStructureGenerator-set_params}{}}}
+\subsection{\code{singleStructureGenerator$set_params()}}{
+  Public method: Update model parameters and recompute all dependent rate quantities
+(Ri_values, Rc_values, Qi, Qc, Q, ratetree).
+
+The current methylation state sequence and equilibrium frequencies are preserved;
+only stored parameter values and their derived rate quantities are updated.
+Note that alpha_Ri and iota values below 1e-2 are silently clamped to 1e-2
+(consistent with initialization behaviour).
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$set_params(params)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{params}}{Data frame with parameter values, structured as the output of
+\code{get_parameterValues()}.}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Details}{
+    Equilibrium frequencies (\code{eqFreqs}) are intentionally not resampled when
+parameters are updated. The \code{eqFreqs} represent the realized methylation
+equilibrium of this particular sequence instance — they are sampled once at
+initialization (and can be updated by IWE events during evolution). Resampling
+them here would discard that realized state and replace it with a new random
+draw, which is not the intended behaviour when changing parameters mid-simulation
+(e.g. to continue evolving a tip sequence under a different parameter regime).
+The updated alpha/beta parameters are stored and will take effect in any future
+IWE events that resample \code{eqFreqs} within this object.
+  }
+  \subsection{Returns}{
+    NULL
+  }
 }
-}
+
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_Q"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_Q}{}}}
-\subsection{Method \code{get_Q()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_Q(
+\subsection{\code{singleStructureGenerator$get_Q()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_Q(
   siteR = NULL,
   neighbSt = NULL,
   oldSt = NULL,
   newSt = NULL
-)}\if{html}{\out{</div>}}
+)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{siteR}}{default NULL. Numerical value encoding for the sites rate of independent SSE (1, 2 or 3)}
+      \item{\code{neighbSt}}{default NULL. Numerical value encoding for the sites neighbouring state (as in mapNeighbSt_matrix)}
+      \item{\code{oldSt}}{default NULL. Numerical value encoding for the sites old methylation state (1, 2 or 3)}
+      \item{\code{newSt}}{default NULL. Numerical value encoding for the sites new methylation state (1, 2 or 3)}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    With NULL arguments, the list of rate matrices. With non NULL arguments, the corresponding rate of change.
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{siteR}}{default NULL. Numerical value encoding for the sites rate of independent SSE (1, 2 or 3)}
-
-\item{\code{neighbSt}}{default NULL. Numerical value encoding for the sites neighbouring state (as in mapNeighbSt_matrix)}
-
-\item{\code{oldSt}}{default NULL. Numerical value encoding for the sites old methylation state (1, 2 or 3)}
-
-\item{\code{newSt}}{default NULL. Numerical value encoding for the sites new methylation state (1, 2 or 3)}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-With NULL arguments, the list of rate matrices. With non NULL arguments, the corresponding rate of change.
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_siteR"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_siteR}{}}}
-\subsection{Method \code{get_siteR()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_siteR(index = NULL)}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_siteR()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_siteR(index = NULL)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{index}}{default NULL. Numerical value for the index of the CpG position within the singleStr instance}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    with NULL arguments, siteR vector. non NULL arguments, the corresponding siteR
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{index}}{default NULL. Numerical value for the index of the CpG position within the singleStr instance}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-with NULL arguments, siteR vector. non NULL arguments, the corresponding siteR
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_neighbSt"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_neighbSt}{}}}
-\subsection{Method \code{get_neighbSt()}}{
-Public Method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_neighbSt(index = NULL)}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_neighbSt()}}{
+  Public Method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_neighbSt(index = NULL)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{index}}{default NULL. Numerical value for the index of the CpG position within the singleStr instance}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    with NULL arguments, neighbSt vector. non NULL arguments, the corresponding neighbSt
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{index}}{default NULL. Numerical value for the index of the CpG position within the singleStr instance}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-with NULL arguments, neighbSt vector. non NULL arguments, the corresponding neighbSt
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-update_ratetree_otherStr"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-update_ratetree_otherStr}{}}}
-\subsection{Method \code{update_ratetree_otherStr()}}{
-Public Method. Update ratetree from another singleStructure instance
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$update_ratetree_otherStr(position, rate)}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$update_ratetree_otherStr()}}{
+  Public Method. Update ratetree from another singleStructure instance
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$update_ratetree_otherStr(position, rate)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{position}}{Numerical value for the index of the CpG position within the singleStr instance}
+      \item{\code{rate}}{Rate of change to asign to that position}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    NULL
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{position}}{Numerical value for the index of the CpG position within the singleStr instance}
-
-\item{\code{rate}}{Rate of change to asign to that position}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-NULL
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_Qi"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_Qi}{}}}
-\subsection{Method \code{get_Qi()}}{
-Public Method. Get list of matrices for SSE process
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_Qi(siteR = NULL, oldSt = NULL, newSt = NULL)}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_Qi()}}{
+  Public Method. Get list of matrices for SSE process
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_Qi(siteR = NULL, oldSt = NULL, newSt = NULL)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{siteR}}{default NULL. Numerical value encoding for the sites rate of independent SSE (1, 2 or 3)}
+      \item{\code{oldSt}}{default NULL. Numerical value encoding for the sites old methylation state (1, 2 or 3)}
+      \item{\code{newSt}}{default NULL. Numerical value encoding for the sites new methylation state (1, 2 or 3)}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    With NULL arguments, the list of SSEi rate matrices. With non NULL arguments, the corresponding rate of change.
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{siteR}}{default NULL. Numerical value encoding for the sites rate of independent SSE (1, 2 or 3)}
-
-\item{\code{oldSt}}{default NULL. Numerical value encoding for the sites old methylation state (1, 2 or 3)}
-
-\item{\code{newSt}}{default NULL. Numerical value encoding for the sites new methylation state (1, 2 or 3)}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-With NULL arguments, the list of SSEi rate matrices. With non NULL arguments, the corresponding rate of change.
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_seqSt_leftneighb"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seqSt_leftneighb}{}}}
-\subsection{Method \code{get_seqSt_leftneighb()}}{
-Public Method. Decode methylation state of left neighbor form owns neighbSt
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seqSt_leftneighb(index)}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_seqSt_leftneighb()}}{
+  Public Method. Decode methylation state of left neighbor form owns neighbSt
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_seqSt_leftneighb(index)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{index}}{Integer index value for the CpG position within the singleStr instance}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    decoded methylation state ($seq) of left neighbor (1, 2 or 3 for unmethylated, partially methylated or methylated)
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{index}}{Integer index value for the CpG position within the singleStr instance}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-decoded methylation state ($seq) of left neighbor (1, 2 or 3 for unmethylated, partially methylated or methylated)
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-get_seqSt_rightneighb"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-get_seqSt_rightneighb}{}}}
-\subsection{Method \code{get_seqSt_rightneighb()}}{
-Public Method. Decode methylation state of left neighbor form owns neighbSt
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$get_seqSt_rightneighb(index)}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$get_seqSt_rightneighb()}}{
+  Public Method. Decode methylation state of left neighbor form owns neighbSt
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$get_seqSt_rightneighb(index)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{index}}{Integer index value for the CpG position within the singleStr instance}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    decoded methylation state ($seq) of right neighbor (1, 2 or 3 for unmethylated, partially methylated or methylated)
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{index}}{Integer index value for the CpG position within the singleStr instance}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-decoded methylation state ($seq) of right neighbor (1, 2 or 3 for unmethylated, partially methylated or methylated)
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-cftp_all_equal"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-cftp_all_equal}{}}}
-\subsection{Method \code{cftp_all_equal()}}{
-Public Method. Make a singleStructure with the same segment lengths and parameters
+\subsection{\code{singleStructureGenerator$cftp_all_equal()}}{
+  Public Method. Make a singleStructure with the same segment lengths and parameters
 as the focal one but where all states are m or u
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$cftp_all_equal(state, testing = FALSE)}\if{html}{\out{</div>}}
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$cftp_all_equal(state, testing = FALSE)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{state}}{Character value "U" or "M"}
+      \item{\code{testing}}{default FALSE. TRUE for testing output}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    right neighbSt
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{state}}{Character value "U" or "M"}
-
-\item{\code{testing}}{default FALSE. TRUE for testing output}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-right neighbSt
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-set_seqSt_update_neighbSt"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-set_seqSt_update_neighbSt}{}}}
-\subsection{Method \code{set_seqSt_update_neighbSt()}}{
-Public Method. Set the methylation state of a sequence position and update the neighbor's neighbSt. It does NOT update RATETREE
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$set_seqSt_update_neighbSt(
+\subsection{\code{singleStructureGenerator$set_seqSt_update_neighbSt()}}{
+  Public Method. Set the methylation state of a sequence position and update the neighbor's neighbSt. It does NOT update RATETREE
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$set_seqSt_update_neighbSt(
   index,
   newSt,
   testing = FALSE
-)}\if{html}{\out{</div>}}
+)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{index}}{Numerical value for the index of the CpG position within the singleStr instance}
+      \item{\code{newSt}}{Numerical value encoding for the sites new methylation state (1, 2 or 3)}
+      \item{\code{testing}}{default FALSE. TRUE for testing output}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    NULL when testing FALSE. Testing output when testing TRUE.
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{index}}{Numerical value for the index of the CpG position within the singleStr instance}
-
-\item{\code{newSt}}{Numerical value encoding for the sites new methylation state (1, 2 or 3)}
-
-\item{\code{testing}}{default FALSE. TRUE for testing output}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-NULL when testing FALSE. Testing output when testing TRUE.
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-reset_seq"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-reset_seq}{}}}
-\subsection{Method \code{reset_seq()}}{
-Public Method. Resets the sequence states by resampling according to the instance's equilibrium frequencies.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$reset_seq()}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$reset_seq()}}{
+  Public Method. Resets the sequence states by resampling according to the instance's equilibrium frequencies.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$reset_seq()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    NULL. The sequence is updated in place.
+  }
 }
 
-\subsection{Returns}{
-NULL. The sequence is updated in place.
-}
-}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-singleStructureGenerator-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-singleStructureGenerator-clone}{}}}
-\subsection{Method \code{clone()}}{
-The objects of this class are cloneable with this method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{singleStructureGenerator$clone(deep = FALSE)}\if{html}{\out{</div>}}
+\subsection{\code{singleStructureGenerator$clone()}}{
+  The objects of this class are cloneable with this method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{singleStructureGenerator$clone(deep = FALSE)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{deep}}{Whether to make a deep clone.}
+    }
+    \if{html}{\out{</div>}}
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{deep}}{Whether to make a deep clone.}
-}
-\if{html}{\out{</div>}}
-}
-}
 }

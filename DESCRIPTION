@@ -1,7 +1,7 @@
 Package: MethEvolSIM
 Title: Simulate DNA Methylation Dynamics on Different Genomic
         Structures along Genealogies
-Version: 0.2.1
+Version: 0.3.0
 Authors@R: c(
     person('Sara', 'Castillo Vicente', , 'castillo@bio.lmu.de', role=c('aut', 'cre')),
     person('Dirk', 'Metzler', , 'metzler@bio.lmu.de', role=c('aut', 'ths'))
@@ -26,13 +26,13 @@ Description: DNA methylation is an epigenetic modification involved in genomic s
       frequencies in genomic structures like CpG islands.
 License: GPL (>= 3)
 Encoding: UTF-8
-RoxygenNote: 7.3.2
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: R6, ape
 Depends: R (>= 4.0)
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0
 NeedsCompilation: no
-Packaged: 2025-04-11 11:08:50 UTC; castillo
+Packaged: 2026-05-29 14:20:12 UTC; castillo
 Repository: CRAN
-Date/Publication: 2025-04-11 22:00:19 UTC
+Date/Publication: 2026-05-29 15:10:02 UTC

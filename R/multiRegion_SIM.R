@@ -797,7 +797,7 @@ singleStructureGenerator <-
                 #' @param dt time step length.
                 #' @param testing logical value for testing purposes. Default FALSE.
                 #'
-                #' @return default NULL. If testing TRUE it returns a list with the debugNov3.outnumber of events sampled and a
+                #' @return default NULL. If testing TRUE it returns a list with the number of events sampled and a
                 #' dataframe with the position(s) affected, new state and old methylation state.
                 #'
                 SSE_evol = function(dt, testing = FALSE) {
@@ -1162,10 +1162,59 @@ singleStructureGenerator <-
                 #' Public Method.
                 #' @return The 3 $Ri_values
                 get_Ri_values = function() private$Ri_values,
-                
+
+                #' @description
+                #' Public method: Update model parameters and recompute all dependent rate quantities
+                #' (Ri_values, Rc_values, Qi, Qc, Q, ratetree).
+                #'
+                #' The current methylation state sequence and equilibrium frequencies are preserved;
+                #' only stored parameter values and their derived rate quantities are updated.
+                #' Note that alpha_Ri and iota values below 1e-2 are silently clamped to 1e-2
+                #' (consistent with initialization behaviour).
+                #'
+                #' @details
+                #' Equilibrium frequencies (\code{eqFreqs}) are intentionally not resampled when
+                #' parameters are updated. The \code{eqFreqs} represent the realized methylation
+                #' equilibrium of this particular sequence instance — they are sampled once at
+                #' initialization (and can be updated by IWE events during evolution). Resampling
+                #' them here would discard that realized state and replace it with a new random
+                #' draw, which is not the intended behaviour when changing parameters mid-simulation
+                #' (e.g. to continue evolving a tip sequence under a different parameter regime).
+                #' The updated alpha/beta parameters are stored and will take effect in any future
+                #' IWE events that resample \code{eqFreqs} within this object.
+                #'
+                #' @param params Data frame with parameter values, structured as the output of
+                #'   \code{get_parameterValues()}.
+                #'
+                #' @return NULL
+                set_params = function(params) {
+                  if (!is.data.frame(params) ||
+                      !all(c("alpha_pI", "beta_pI", "alpha_mI", "beta_mI",
+                             "alpha_pNI", "beta_pNI", "alpha_mNI", "beta_mNI",
+                             "mu", "alpha_Ri", "iota") %in% colnames(params))) {
+                    stop("'params' must be a dataframe with column names as in get_parameterValues() output")
+                  }
+                  private$alpha_pI  <- params$alpha_pI
+                  private$beta_pI   <- params$beta_pI
+                  private$alpha_mI  <- params$alpha_mI
+                  private$beta_mI   <- params$beta_mI
+                  private$alpha_pNI <- params$alpha_pNI
+                  private$beta_pNI  <- params$beta_pNI
+                  private$alpha_mNI <- params$alpha_mNI
+                  private$beta_mNI  <- params$beta_mNI
+                  private$alpha_Ri  <- params$alpha_Ri
+                  private$iota      <- params$iota
+                  private$Ri_values <- private$init_Ri_values()
+                  private$Rc_values <- private$init_Rc_values()
+                  private$set_Qi()
+                  private$set_Qc()
+                  private$set_Q()
+                  self$initialize_ratetree()
+                },
+
                 #' @description
                 #' Public Method.
-                #' 
+                #'
                 #' @param siteR default NULL. Numerical value encoding for the sites rate of independent SSE (1, 2 or 3)
                 #' @param neighbSt default NULL. Numerical value encoding for the sites neighbouring state (as in mapNeighbSt_matrix)
                 #' @param oldSt default NULL. Numerical value encoding for the sites old methylation state (1, 2 or 3)
@@ -1711,7 +1760,46 @@ combiStructureGenerator <-
                 #'
                 #' @return Model parameter for the rate of the IWE evolutionary process (per island and branch length).
                 get_mu = function() private$mu,
-                
+
+                #' @description
+                #' Public method: Update model parameters across all contained singleStructureGenerator objects
+                #' and recompute all dependent quantities (IWE rate, Ri_values, Rc_values, Qi, Qc, Q, ratetree).
+                #'
+                #' The current methylation state sequences and equilibrium frequencies are preserved;
+                #' only stored parameter values and their derived quantities are updated.
+                #' This allows changing parameters between simulation segments — for example,
+                #' setting \code{mu = 0} to suppress IWE events on a terminal branch while keeping
+                #' all other parameters and the current sequence state intact.
+                #'
+                #' @details
+                #' Equilibrium frequencies (\code{eqFreqs}) are intentionally not resampled when
+                #' parameters are updated. Each contained \code{singleStructureGenerator} holds a
+                #' realized \code{eqFreqs} that was sampled at initialization (and can be updated by
+                #' IWE events during evolution). Resampling here would discard those realized states
+                #' and replace them with new random draws, which is not the intended behaviour when
+                #' changing parameters mid-simulation (e.g. to continue evolving tip sequences from
+                #' a completed tree simulation under a different parameter regime). The updated
+                #' alpha/beta parameters are stored and will take effect in any future IWE events
+                #' that resample \code{eqFreqs} within each contained object.
+                #'
+                #' @param params Data frame with parameter values, structured as the output of
+                #'   \code{get_parameterValues()}.
+                #'
+                #' @return NULL
+                set_params = function(params) {
+                  if (!is.data.frame(params) ||
+                      !all(c("alpha_pI", "beta_pI", "alpha_mI", "beta_mI",
+                             "alpha_pNI", "beta_pNI", "alpha_mNI", "beta_mNI",
+                             "mu", "alpha_Ri", "iota") %in% colnames(params))) {
+                    stop("'params' must be a dataframe with column names as in get_parameterValues() output")
+                  }
+                  private$mu <- params$mu
+                  private$set_IWE_rate()
+                  for (i in seq_along(private$singleStr)) {
+                    private$singleStr[[i]]$set_params(params)
+                  }
+                },
+
                 #' @description
                 #' Public method. Get the unique ID of the instance
                 #'
